@@ -125,11 +125,11 @@ Beyond classification, **SeaAlert** converts unstructured text into actionable s
 
 | Stage | Description |
 |-------|-------------|
-| **1. Data Generation** | Synthetic maritime messages via GPT-4 (1,872 samples, 4 labels) |
-| **2. Audio Pipeline** | TTS → Noise (3 SNR levels) → ASR (Whisper) |
-| **3. Model Training** | BoW (TF-IDF + LogReg/SVM/NB) and Transformer (RoBERTa) |
+| **1. Data Generation** | Synthetic maritime messages via GPT-4 (1,872 samples) |
+| **2. Audio Pipeline** | TTS → Noisy Channel (3 SNR levels) → Whisper ASR |
+| **3. Model Training** | Baseline (BoW) vs Transformer (RoBERTa) |
 | **4. Experiments** | Codeword Masking, Adversarial Traps, ASR Robustness |
-| **5. Evaluation** | Accuracy, Macro-F1, Confusion Matrices, Error Analysis |
+| **5. Results & Extraction** | Classification + **Information Extraction** (Vessel, Location, POB) |
 
 ---
 
