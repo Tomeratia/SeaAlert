@@ -1,0 +1,5 @@
+model,type,setting,acc,macro_f1,with_cw_acc,no_cw_acc,gap
+logistic_regression,baseline,B_masked,0.573,0.5651,0.7802,0.4737,0.3065
+roberta-base,transformer,B_masked,0.5338,0.5204,0.5824,0.5105,0.0719
+logistic_regression,baseline,C_clean_to_masked,0.5053,0.4441,0.4615,0.5263,-0.0648
+roberta-base,transformer,C_clean_to_masked,0.5338,0.5204,0.5824,0.5105,0.0719

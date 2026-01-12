@@ -1,0 +1,64 @@
+# ===========================================
+# SeaAlert - Git Ignore File
+# ===========================================
+
+# Secrets 
+src/API_KEY.py
+API_KEY.py
+*.env
+.env
+
+# Large data files
+data/
+# Exception: Allow CSV datasets (small enough for Git)
+!data/processed/*.csv
+!data/asr/*.csv
+!data/audio_*/audio_index.csv
+!data/audio_*/noisy_index.csv
+
+models/
+*.wav
+*.mp3
+*.safetensors
+*.joblib
+*.pt
+*.pth
+*.bin
+
+# Checkpoints
+**/checkpoints/
+**/checkpoint-*/
+
+# Old versions
+stage2/
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp files
+*.tmp
+*_partial*
+tmp_*

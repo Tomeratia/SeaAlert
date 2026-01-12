@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "generated_at": "2026-01-12T07:44:49.663749",
+    "model": "transformer (fine-tuned)",
+    "asr_source": "Real ASR (from audio pipeline)"
+  },
+  "input": {
+    "original_text": "MAYDAY, MAYDAY, MAYDAY. This is the fishing vessel Ocean Explorer, call sign WXYZ123, MMSI 123456789. We are adrift, approximately 15 nautical miles east of Cape Point, at position 34 degrees 12 minutes South, 18 degrees 29 minutes East. The vessel's engine has failed, and we are currently taking on water. Weather conditions are worsening with 4-meter swells and visibility reduced to 2 nautical miles. There are 6 persons on board. We require immediate assistance for towing. Repeat, we are requesting a tow. Over.",
+    "asr_text": "maybe, maybe, maybe. This is the Fishing Vessel Oceanate Spoiler. Paul  Signed to be its Ryzen 123 MMSI 120 3 million 456000 7809. The Area Drift  approximately 15 nautical miles east of Cape Point, a position 34 degrees 12 minutes south,  18 degrees 29 minutes east. The Vessel's engine has failed and we are currently taking on water.  Whether conditions are a worse name before need as well as invisibility we choose to  T-Nautical miles. There are six persons on board. You require immediate assistance for  training. You please, you are wrecked.",
+    "style": "formal",
+    "similarity": 0.42736644798500467
+  },
+  "classification": {
+    "predicted": "Distress",
+    "confidence": 0.8506802320480347,
+    "ground_truth": "Distress",
+    "correct": true
+  },
+  "extraction": {
+    "vessel": "Oceanate Spoiler",
+    "call_sign": null,
+    "mmsi": null,
+    "position": null,
+    "pob": null,
+    "nature": "taking on water",
+    "injury": null,
+    "weather": null,
+    "assistance": "assistance",
+    "codeword": null
+  },
+  "ground_truth_metadata": {
+    "vessel": "Ocean Explorer",
+    "call_sign": "WXYZ123",
+    "mmsi": "123456789",
+    "location": "34 degrees 12 minutes South, 18 degrees 29 minutes East",
+    "weather": "4-meter swells, visibility reduced to 2 nautical miles",
+    "pob": "6",
+    "nature": "engine failure, taking on water",
+    "injury": "none",
+    "codeword": "MAYDAY",
+    "scenario_type": "tow_request"
+  }
+}

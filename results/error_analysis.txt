@@ -1,0 +1,49 @@
+============================================================
+ERROR ANALYSIS REPORT
+============================================================
+
+BoW Top Confusion Pairs:
+  Safety -> Routine: 28
+  Urgency -> Routine: 23
+  Urgency -> Distress: 12
+  Distress -> Routine: 8
+  Routine -> Urgency: 5
+
+Transformer Top Confusion Pairs:
+  Safety -> Routine: 25
+  Urgency -> Routine: 21
+  Urgency -> Distress: 11
+  Safety -> Urgency: 9
+  Distress -> Urgency: 9
+
+Sample BoW Errors (first 10):
+
+  True: Safety, Pred: Routine
+  Text: This is the vessel Ocean Explorer, call sign ABCD123. We are currently positioned at latitude 34 deg...
+
+  True: Safety, Pred: Urgency
+  Text: This is the fishing vessel Ocean Seeker relaying an urgent medical issue. They are currently at posi...
+
+  True: Routine, Pred: Safety
+  Text: Uh, this is the sailing vessel, uh, Ocean Breeze, calling all stations. We’ve, uh, got a situation h...
+
+  True: Urgency, Pred: Routine
+  Text: Attention all vessels in the vicinity of the Sargasso Sea. This is the motor vessel Ocean Voyager, c...
+
+  True: Safety, Pred: Routine
+  Text: This is the fishing vessel Ocean Explorer relaying a report from the cargo ship Blue Horizon. They h...
+
+  True: Distress, Pred: Routine
+  Text: This is the fishing vessel Ocean Explorer, call sign ABC123, reporting a grounding incident at appro...
+
+  True: Safety, Pred: Urgency
+  Text: Uh, this is the MV Seaworthy, uh, we’re about 15 miles off the coast of, um, Cape Town. We’ve got a ...
+
+  True: Safety, Pred: Routine
+  Text: This is the fishing vessel Ocean Explorer, call sign ABC123, conducting a radio check. Position appr...
+
+  True: Urgency, Pred: Distress
+  Text: Hey, this is the fishing trawler Sea Breeze, uh, we’ve got a bit of a situation here. Water's coming...
+
+  True: Urgency, Pred: Distress
+  Text: This is a relay from the fishing vessel Ocean Explorer. They report a collision with the cargo ship ...
