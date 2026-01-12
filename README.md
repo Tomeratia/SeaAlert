@@ -103,6 +103,22 @@ Two transformer models were evaluated on the validation set:
 
 ---
 
+## Information Extraction Capabilities
+
+Beyond classification, **SeaAlert** converts unstructured text into actionable structured data using a hybrid approach (Regex + LLM). This is critical for rescue coordination centers.
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Vessel Name** | Name of the ship in distress | `Ocean Explorer` |
+| **Call Sign / MMSI** | Unique radio identifiers | `WXYZ123` / `123456789` |
+| **Location** | Coordinates or relative position | `34°15'N, 120°45'W` |
+| **POB** | Persons On Board (Count) | `15` |
+| **Nature** | Type of incident | `Sinking`, `Fire`, `Medical` |
+
+*Demonstrated in Notebook 05: The system takes a raw audio transcript and outputs a JSON object ready for operational use.*
+
+---
+
 ## Pipeline
 
 ![SeaAlert Pipeline](pipeline_diagram.png)
