@@ -1,0 +1,762 @@
+label,scenario_type,style,vessel,call_sign,mmsi,location,weather,pob,has_codeword,codeword_type,codeword,text
+Routine,position_report,informal,,4XAB1,653035110,5 nm west of Haifa,,,False,NONE,,"Uh, station listening, we’re at 5 nm west of Haifa… call sign 4XAB1, MMSI 653035110. Just giving our position report, please confirm you copy."
+Routine,radio_check,informal,,4XCD2,,Eilat Marina,,,False,NONE,,"Eilat Marina, anyone on VHF copy? This is call sign 4XCD2, just doing a radio check, can you hear me?"
+Routine,position_report,third_party,SEA BREEZE,4XCD2,653778756,Hadera power station area,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM SEA BREEZE. SEA BREEZE, call sign 4XCD2, MMSI 653778756, REPORTING POSITION AT Hadera power station area. WEATHER HEAVY RAIN. OVER"
+Routine,tow_request,informal,,4XAB1,693303705,Ashdod Port,,5 PERSONS ON BOARD,False,NONE,,"Any station, any station, we need a tow request at Ashdod Port. Call sign 4XAB1, MMSI 693303705. We’ve got 5 PERSONS ON BOARD and we can’t make way, need assistance towing us in, please respond."
+Routine,position_report,informal,SEA BREEZE,,444703907,Ashdod Port,heavy rain,,False,NONE,,"Sea Breeze, MMSI 444703907… we’re in Ashdod Port right now, heavy rain, just giving our position report—please confirm you copy."
+Routine,radio_check,informal,COASTAL SPIRIT,,276667861,,,,False,NONE,,"Coastal Spirit calling, can anyone hear me? Just need a quick radio check. MMSI 276667861."
+Routine,position_report,informal,,4XCD2,548195935,5 nm west of Haifa,,,False,NONE,,"Uh, station listening, I’m at 5 nm west of Haifa, call sign 4XCD2, MMSI 548195935… just giving a position report, please confirm you copy."
+Routine,tow_request,informal,,,428306011,Eilat Marina,,6 PERSONS ON BOARD,False,NONE,,"Any station, any station—need a tow at Eilat Marina. We’ve got 6 PERSONS ON BOARD and we can’t make way, stuck here and need assistance now. MMSI 428306011."
+Routine,radio_check,third_party,BLUE HORIZON,4XEF3,349926919,Hadera power station area,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED RADIO CHECK FROM BLUE HORIZON. BLUE HORIZON, CALL SIGN 4XEF3, MMSI 349926919, REQUESTING RADIO CHECK IN Hadera power station area. WEATHER: strong wind. OVER."
+Routine,radio_check,third_party,RED SEA RUNNER,4XGH4,588690725,5 nm west of Tel Aviv,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED  FROM RED SEA RUNNER, CALL SIGN 4XGH4, MMSI 588690725. REPORTING RADIO_CHECK REQUEST FROM RED SEA RUNNER AT 5 nm west of Tel Aviv. WEATHER STRONG WIND. OVER"
+Routine,radio_check,third_party,SEA BREEZE,4XAB1,317734861,5 nm west of Tel Aviv,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM SEA BREEZE, call sign 4XAB1, MMSI 317734861. SEA BREEZE REQUESTS RADIO CHECK. POSITION 5 nm west of Tel Aviv. WEATHER STRONG WIND. OVER"
+Routine,radio_check,third_party,RED SEA RUNNER,4XAB1,613140753,Eilat Marina,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED  FROM RED SEA RUNNER. This is Blue Horizon reporting a radio_check request from vessel RED SEA RUNNER, call sign 4XAB1, MMSI 613140753, at Eilat Marina. Weather: poor visibility. OVER"
+Routine,radio_check,third_party,RED SEA RUNNER,4XAB1,322998994,Hadera power station area,choppy waves,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM RED SEA RUNNER. Radio check request from vessel RED SEA RUNNER, call sign 4XAB1, MMSI 322998994. Position: Hadera power station area. Weather: choppy waves. OVER"
+Routine,position_report,third_party,SEA BREEZE,4XEF3,666825638,Eilat Marina,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED MESSAGE FROM SEA BREEZE, CALL SIGN 4XEF3, MMSI 666825638. SCENARIO TYPE POSITION REPORT. POSITION Eilat Marina. WEATHER strong wind. OVER"
+Routine,radio_check,third_party,RED SEA RUNNER,4XCD2,745119047,Hadera power station area,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM RED SEA RUNNER. RADIO CHECK REQUEST FROM RED SEA RUNNER, CALL SIGN 4XCD2, MMSI 745119047, IN POSITION Hadera power station area. WEATHER ROUGH SEAS. THIS IS BLUE HORIZON STANDING BY TO ASSIST WITH RADIO CHECK. OVER"
+Routine,position_report,informal,,,,Eilat Marina,heavy rain,,False,NONE,,"We’re at Eilat Marina right now, heavy rain, just giving a position report—standing by."
+Routine,position_report,informal,SEA BREEZE,,291969690,,choppy waves,4 PERSONS ON BOARD,False,NONE,,"Sea Breeze, MMSI 291969690… we’re reporting our position now, choppy waves out here and we’ve got 4 persons on board."
+Routine,radio_check,informal,,4XCD2,,10 nm offshore of Herzliya Marina,,,False,NONE,,"Hello, hello—any station, can you hear 4XCD2? I’m 10 nm offshore of Herzliya Marina, trying a radio check, not sure if this VHF’s working. Please reply if you copy."
+Routine,position_report,third_party,MEDITERRANEAN DREAM,4XLM6,600957212,Eilat Marina,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED DISTRESS MESSAGE FROM MEDITERRANEAN DREAM, CALL SIGN 4XLM6, MMSI 600957212. REPORTING POSITION Eilat Marina. SCENARIO TYPE POSITION REPORT. WEATHER POOR VISIBILITY. OVER"
+Routine,position_report,informal,,,,5 nm west of Haifa,,,False,NONE,,"Uh, anyone copy? I’m about 5 nm west of Haifa… just giving my position report, 5 nm west of Haifa."
+Routine,position_report,informal,,4XCD2,,Eilat Marina,choppy waves,5 PERSONS ON BOARD,False,NONE,,"Uh, station listening—this is call sign 4XCD2, we’re at Eilat Marina. Position report: Eilat Marina. We’ve got choppy waves here and 5 PERSONS ON BOARD."
+Routine,tow_request,third_party,MEDITERRANEAN DREAM,4XCD2,301281557,Netanya coastline,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED DISTRESS CALL FROM MEDITERRANEAN DREAM, CALL SIGN 4XCD2, MMSI 301281557. REPORTING TOW REQUEST. POSITION Netanya coastline. WEATHER rough seas. OVER"
+Routine,position_report,third_party,MEDITERRANEAN DREAM,4XGH4,258165865,Ashdod Port,choppy waves,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM MEDITERRANEAN DREAM. POSITION REPORT: MEDITERRANEAN DREAM, CALL SIGN 4XGH4, MMSI 258165865, LOCATED AT Ashdod Port. WEATHER: choppy waves. OVER"
+Routine,position_report,third_party,COASTAL SPIRIT,4XEF3,317326729,10 nm offshore of Herzliya Marina,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM COASTAL SPIRIT. COASTAL SPIRIT, call sign 4XEF3, MMSI 317326729, REPORTING POSITION AT 10 nm offshore of Herzliya Marina. WEATHER: strong wind. OVER"
+Routine,position_report,third_party,BLUE HORIZON,4XGH4,397018781,Eilat Marina,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM BLUE HORIZON. BLUE HORIZON, call sign 4XGH4, MMSI 397018781, REPORTING POSITION AT Eilat Marina. WEATHER HEAVY RAIN. OVER"
+Routine,tow_request,informal,,4XAB1,453810544,Netanya coastline,strong wind,,False,NONE,,"Coast Guard, anyone copy? We need a tow request, we’re in trouble off Netanya coastline. Strong wind’s pushing us, we can’t make headway and we’re drifting. Call sign 4XAB1, MMSI 453810544. Please send assistance, we need a tow fast."
+Routine,position_report,third_party,BLUE HORIZON,4XGH4,262959284,Netanya coastline,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM BLUE HORIZON, CALL SIGN 4XGH4, MMSI 262959284. POSITION REPORT: Netanya coastline. WEATHER: strong wind. OVER"
+Routine,position_report,third_party,GALILEE STAR,4XGH4,506284028,Eilat Marina,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM GALILEE STAR. GALILEE STAR, CALL SIGN 4XGH4, MMSI 506284028, REPORTING POSITION AT Eilat Marina. WEATHER: poor visibility. OVER."
+Routine,position_report,informal,,4XJK5,,5 nm west of Tel Aviv,poor visibility,,False,NONE,,"Station calling, this is call sign 4XJK5 — position report, we’re 5 nm west of Tel Aviv. Poor visibility out here, having trouble keeping visual references, please advise traffic in the area."
+Routine,radio_check,informal,,,464371717,5 nm west of Haifa,,5 PERSONS ON BOARD,False,NONE,,"Uh, station listening, can anyone hear me? Radio check please. We’re at 5 nm west of Haifa. MMSI 464371717. We’ve got 5 PERSONS ON BOARD. Please confirm you copy."
+Routine,tow_request,informal,,,456287095,Hadera power station area,,,False,NONE,,"Any station, any station—need a tow request. We’re stuck in the Hadera power station area, can’t make way. MMSI 456287095. Please send assistance, we need a tow as soon as possible."
+Routine,position_report,informal,,,,Ashdod Port,,5 PERSONS ON BOARD,False,NONE,,"We’re at Ashdod Port, position report—there are 5 PERSONS ON BOARD."
+Routine,radio_check,informal,,,,Eilat Marina,,,False,NONE,,"Uh, station at Eilat Marina, can anyone hear me? Just need a quick radio check, how do I sound?"
+Routine,radio_check,third_party,RED SEA RUNNER,4XLM6,767945747,Hadera power station area,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED  FROM RED SEA RUNNER. This is Sea Watcher relaying a radio check request from RED SEA RUNNER, call sign 4XLM6, MMSI 767945747. Position: Hadera power station area. Weather: rough seas. OVER"
+Routine,radio_check,informal,,,,10 nm offshore of Herzliya Marina,,5 PERSONS ON BOARD,False,NONE,,"Anyone on VHF, can you hear me? Need a quick radio check. We’re at 10 nm offshore of Herzliya Marina, 5 PERSONS ON BOARD. Signal seems weak—please confirm if you copy."
+Routine,tow_request,third_party,BLUE HORIZON,4XLM6,483450553,Eilat Marina,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM BLUE HORIZON, CALL SIGN 4XLM6, MMSI 483450553. BLUE HORIZON REQUESTING TOW ASSISTANCE AT Eilat Marina. WEATHER IS fog. OVER"
+Routine,radio_check,informal,,4XEF3,373497327,Eilat Marina,,,False,NONE,,"Uh, station calling, can anyone hear me? Radio check from call sign 4XEF3, MMSI 373497327, at Eilat Marina. How do you read?"
+Routine,radio_check,third_party,RED SEA RUNNER,4XAB1,320123666,5 nm west of Tel Aviv,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED  FROM RED SEA RUNNER. THIS IS BLUE HARBOR. RED SEA RUNNER, CALL SIGN 4XAB1, MMSI 320123666, REQUESTING RADIO CHECK. POSITION 5 nm west of Tel Aviv. WEATHER ROUGH SEAS. OVER"
+Routine,radio_check,informal,,,242836793,10 nm offshore of Herzliya Marina,,3 PERSONS ON BOARD,False,NONE,,"Any station, any station, can someone give me a radio check? MMSI 242836793, 10 nm offshore of Herzliya Marina, 3 PERSONS ON BOARD. I’m not sure if my VHF is getting out—please respond if you copy."
+Routine,position_report,informal,,4XCD2,374484941,Netanya coastline,,2 PERSONS ON BOARD,False,NONE,,"Uh, station listening—position report, we’re off the Netanya coastline. Call sign 4XCD2, MMSI 374484941. We’ve got 2 persons on board."
+Routine,tow_request,informal,GALILEE STAR,4XCD2,316066793,5 nm west of Haifa,,4 PERSONS ON BOARD,False,NONE,,"Galilee Star, call sign 4XCD2, MMSI 316066793… we’re 5 nm west of Haifa and we’ve lost propulsion, drifting and can’t get the engine back. Need a tow urgently. 4 persons on board. Please advise who can assist."
+Routine,tow_request,informal,,4XLM6,,Netanya coastline,strong wind,,False,NONE,,"Any station, any station—need a tow request. We’re off Netanya coastline and we can’t make headway in this strong wind, getting pushed along and can’t hold position. Call sign 4XLM6, please respond if you can tow or advise."
+Routine,radio_check,third_party,SEA BREEZE,4XEF3,577040284,Netanya coastline,choppy waves,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM SEA BREEZE, CALL SIGN 4XEF3, MMSI 577040284. SCENARIO RADIO CHECK REQUEST. POSITION Netanya coastline. WEATHER choppy waves. OVER"
+Routine,position_report,third_party,SEA BREEZE,4XAB1,480477683,Hadera power station area,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED  FROM SEA BREEZE. SEA BREEZE, call sign 4XAB1, MMSI 480477683, REPORTING POSITION AT Hadera power station area. WEATHER: strong wind. OVER"
+Routine,tow_request,informal,RED SEA RUNNER,4XCD2,,,,,False,NONE,,"Red Sea Runner, call sign 4XCD2… we’re dead in the water, engine’s quit and we can’t get it back. Need a tow as soon as possible, we’re drifting and not making way. Any vessel able to assist, please respond."
+Routine,position_report,informal,COASTAL SPIRIT,4XCD2,591079829,,,4 PERSONS ON BOARD,False,NONE,,"Coastal Spirit, call sign 4XCD2, MMSI 591079829 — position report, we’ve got 4 persons on board."
+Routine,radio_check,third_party,RED SEA RUNNER,4XEF3,333815413,Hadera power station area,choppy waves,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM RED SEA RUNNER. Radio check requested from vessel RED SEA RUNNER, call sign 4XEF3, MMSI 333815413. Position: Hadera power station area. Weather: choppy waves. OVER"
+Routine,radio_check,third_party,COASTAL SPIRIT,4XGH4,550236225,Hadera power station area,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM COASTAL SPIRIT. COASTAL SPIRIT, CALL SIGN 4XGH4, MMSI 550236225, REQUESTING RADIO CHECK IN Hadera power station area. WEATHER: poor visibility. OVER"
+Routine,tow_request,informal,,,,5 nm west of Haifa,poor visibility,,False,NONE,,"Any station, any station… we need a tow. We’re 5 nm west of Haifa, poor visibility, we can’t make way and we’re drifting. Can someone come and take us in tow, please?"
+Routine,tow_request,third_party,BLUE HORIZON,4XGH4,546012478,Eilat Marina,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED REQUEST FOR TOW FROM BLUE HORIZON, CALL SIGN 4XGH4, MMSI 546012478. BLUE HORIZON IS REQUESTING TOW ASSISTANCE AT Eilat Marina. WEATHER IS poor visibility. OVER"
+Routine,position_report,informal,COASTAL SPIRIT,4XLM6,,Palmahim Beach,fog,,False,NONE,,"Coastal Spirit, call sign 4XLM6… we’re at Palmahim Beach. Visibility’s terrible in this fog, just trying to keep position—can anyone confirm we’re being received?"
+Routine,tow_request,informal,,,,Eilat Marina,,1 PERSON ON BOARD,False,NONE,,"Any station, any station—I'm at Eilat Marina and I need a tow right now, my boat can't make way. 1 PERSON ON BOARD. Please send assistance, I'm stuck here."
+Routine,radio_check,informal,,4XAB1,656497252,5 nm west of Tel Aviv,,2 PERSONS ON BOARD,False,NONE,,"Any station, any station, can someone give me a radio check? Call sign 4XAB1, MMSI 656497252, 5 nm west of Tel Aviv. We’ve got 2 persons on board. I’m not sure if you can hear me—please respond."
+Routine,position_report,third_party,SEA BREEZE,4XJK5,467574609,Eilat Marina,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM SEA BREEZE. SEA BREEZE, CALL SIGN 4XJK5, MMSI 467574609, REPORTING POSITION AT Eilat Marina. WEATHER ROUGH SEAS. OVER"
+Routine,radio_check,third_party,COASTAL SPIRIT,4XJK5,540696084,Netanya coastline,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED CALL FROM COASTAL SPIRIT. THIS IS HARBOR WATCHER. COASTAL SPIRIT REQUESTING RADIO CHECK. POSITION Netanya coastline. WEATHER poor visibility. OVER"
+Routine,position_report,third_party,BLUE HORIZON,4XLM6,709677794,Hadera power station area,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM BLUE HORIZON. BLUE HORIZON (call sign 4XLM6, MMSI 709677794) REPORTING POSITION AT Hadera power station area. WEATHER: poor visibility. OVER"
+Routine,position_report,third_party,RED SEA RUNNER,4XGH4,456888294,Eilat Marina,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM RED SEA RUNNER. RED SEA RUNNER, call sign 4XGH4, MMSI 456888294, REPORTING POSITION AT Eilat Marina. WEATHER HEAVY RAIN. OVER"
+Routine,position_report,third_party,BLUE HORIZON,4XEF3,560613550,Ashdod Port,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM BLUE HORIZON. BLUE HORIZON, call sign 4XEF3, MMSI 560613550, REPORTING POSITION AT Ashdod Port. WEATHER HEAVY RAIN. OVER"
+Routine,position_report,informal,MEDITERRANEAN DREAM,,,,rough seas,,False,NONE,,"Mediterranean Dream… just trying to give a position report—rough seas out here, we’re getting tossed around pretty bad."
+Routine,tow_request,third_party,MEDITERRANEAN DREAM,4XJK5,220972273,Netanya coastline,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM MEDITERRANEAN DREAM. MEDITERRANEAN DREAM, CALL SIGN 4XJK5, MMSI 220972273, REQUESTING TOW ASSISTANCE. POSITION Netanya coastline. WEATHER fog. OVER"
+Routine,tow_request,informal,,4XLM6,,10 nm offshore of Herzliya Marina,,5 PERSONS ON BOARD,False,NONE,,"Any station, any station, we need a tow urgently. Call sign 4XLM6, we’re 10 nm offshore of Herzliya Marina. Engine’s dead and we’re drifting, 5 PERSONS ON BOARD. Please respond if you can assist."
+Routine,tow_request,informal,,4XGH4,337039296,5 nm west of Haifa,,,False,NONE,,"Any station, any station, I need a tow request—I'm disabled and drifting at 5 nm west of Haifa. Call sign 4XGH4, MMSI 337039296. Please respond, I need assistance."
+Routine,tow_request,informal,MEDITERRANEAN DREAM,,,,,,False,NONE,,"Any station, any station… MEDITERRANEAN DREAM here. We’ve lost propulsion and we’re drifting, can’t make way. Need a tow urgently before we get into trouble—can someone assist or relay to coastguard?"
+Routine,tow_request,third_party,MEDITERRANEAN DREAM,4XEF3,652651788,Ashdod Port,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM MEDITERRANEAN DREAM. MEDITERRANEAN DREAM, CALL SIGN 4XEF3, MMSI 652651788, REQUESTING TOW ASSISTANCE AT Ashdod Port. WEATHER HEAVY RAIN. OVER"
+Routine,position_report,informal,SEA BREEZE,,233318206,,,2 PERSONS ON BOARD,False,NONE,,"Sea Breeze, mmsi 233318206… we’ve got 2 persons on board—trying to give a position report but I don’t have our exact location to pass right now, standby."
+Routine,radio_check,informal,,4XEF3,,5 nm west of Tel Aviv,,3 PERSONS ON BOARD,False,NONE,,"Any station, any station, can someone give me a radio check? Call sign 4XEF3, we’re 5 nm west of Tel Aviv, 3 PERSONS ON BOARD."
+Routine,position_report,informal,,4XGH4,,10 nm offshore of Herzliya Marina,,4 PERSONS ON BOARD,False,NONE,,"Hello, station, this is call sign 4XGH4 — we’re 10 nm offshore of Herzliya Marina, 4 PERSONS ON BOARD. Just giving a position report, please confirm you copy."
+Routine,radio_check,informal,SEA BREEZE,,572807202,Netanya coastline,fog,,False,NONE,,"Sea Breeze calling, can anyone hear me? Radio check please. We’re off Netanya coastline, in fog, and I’m not sure this set’s getting out. MMSI 572807202. Anyone copy?"
+Routine,tow_request,third_party,SEA BREEZE,4XJK5,566394187,Netanya coastline,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED DISTRESS CALL FROM SEA BREEZE, CALL SIGN 4XJK5, MMSI 566394187. SEA BREEZE REQUESTING TOW ASSISTANCE. POSITION Netanya coastline. WEATHER rough seas. OVER"
+Routine,radio_check,informal,RED SEA RUNNER,,,,,,False,NONE,,"Red Sea Runner calling, uh… anyone copy? Can I get a radio check please, how do I sound?"
+Routine,radio_check,third_party,RED SEA RUNNER,4XJK5,719151495,Netanya coastline,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM RED SEA RUNNER, CALL SIGN 4XJK5, MMSI 719151495. RADIO CHECK REQUEST FROM RED SEA RUNNER. POSITION Netanya coastline. WEATHER poor visibility. OVER"
+Routine,position_report,third_party,GALILEE STAR,4XCD2,293053577,Eilat Marina,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED  FROM GALILEE STAR. Reporting position report from vessel GALILEE STAR, call sign 4XCD2, MMSI 293053577. Vessel position: Eilat Marina. Weather in area: heavy rain. OVER"
+Routine,tow_request,third_party,RED SEA RUNNER,4XJK5,606936666,5 nm west of Haifa,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED  FROM RED SEA RUNNER. Reporting tow request. Vessel RED SEA RUNNER, call sign 4XJK5, MMSI 606936666, position 5 nm west of Haifa. Weather heavy rain. OVER"
+Routine,tow_request,third_party,BLUE HORIZON,4XGH4,427761953,Hadera power station area,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM BLUE HORIZON, CALL SIGN 4XGH4, MMSI 427761953. BLUE HORIZON REQUESTING TOW ASSISTANCE. POSITION: Hadera power station area. WEATHER: heavy rain. OVER"
+Routine,radio_check,third_party,RED SEA RUNNER,4XLM6,496641124,5 nm west of Haifa,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED RADIO CHECK FROM RED SEA RUNNER. Vessel RED SEA RUNNER, call sign 4XLM6, MMSI 496641124, requesting radio check. Position: 5 nm west of Haifa. Weather: fog. OVER"
+Safety,navigation_hazard,formal,SEA BREEZE,4XCD2,636398872,32°10.0'N 034°48.0'E (Herzliya area),poor visibility,5 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XCD2 MMSI 636398872  
+POSITION 32°10.0'N 034°48.0'E (Herzliya area)  
+NAVIGATION HAZARD IN THE AREA, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Safety,navigation_hazard,informal,GALILEE STAR,,596232693,,,4 PERSONS ON BOARD,True,SECURITE,SECURITE,"Securite, securite, securite — all stations, all stations. Navigation hazard: large floating debris just ahead, looks like a partially submerged container or timber, hard to see. Vessel GALILEE STAR, mmsi 596232693, 4 persons on board. Keep a sharp lookout and slow down in the area."
+Safety,storm_warning,informal,,,,10 nm offshore of Herzliya Marina,,6 PERSONS ON BOARD,True,SECURITE,SECURITE,"Securite, securite, securite. All stations, all stations—storm warning. Heavy weather building fast in the area 10 nm offshore of Herzliya Marina. Small craft stay clear and seek shelter immediately, this is getting dangerous. 6 persons on board."
+Safety,storm_warning,third_party,COASTAL SPIRIT,4XCD2,405665554,Eilat Marina,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED DISTRESS CALL FROM COASTAL SPIRIT, CALL SIGN 4XCD2, MMSI 405665554. REPORTING STORM WARNING CONDITIONS WITH STRONG WIND IN THE AREA. VESSEL LOCATED AT Eilat Marina. OVER"
+Safety,floating_debris,third_party,RED SEA RUNNER,4XEF3,307939087,Hadera power station area,strong wind,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY, SECURITE RELAY, SECURITE RELAY
+
+THIS IS SILVER HARBOR, RELAYING. RECEIVED SECURITE RELAY FROM RED SEA RUNNER. REPORTING FLOATING DEBRIS IN THE VICINITY. POSITION: Hadera power station area. WEATHER: strong wind. ALL STATIONS ADVISED TO NAVIGATE WITH CAUTION. OVER"
+Safety,floating_debris,informal,,,335591568,Eilat Marina,,,False,NONE,,"Any station near Eilat Marina, we’ve got floating debris in the water right here, looks like a hazard to boats—please keep clear and can someone come check it out. MMSI 335591568."
+Safety,floating_debris,third_party,GALILEE STAR,4XGH4,714015466,Palmahim Beach,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM GALILEE STAR, call sign 4XGH4, MMSI 714015466. Reported floating debris hazard in the vicinity of Palmahim Beach. Weather reported as poor visibility. OVER."
+Safety,navigation_hazard,informal,SEA BREEZE,,362915636,,,2 PERSONS ON BOARD,False,NONE,,"Sea Breeze, mmsi 362915636 — urgent, we’ve got a navigation hazard right ahead, something in the water and we nearly hit it. We’re slowing right down and trying to avoid, two persons on board. Any traffic nearby, keep a sharp lookout and steer clear."
+Safety,navigation_hazard,formal,BLUE HORIZON,4XAB1,799226355,32°10.0'N 034°48.0'E (Herzliya area),poor visibility,5 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XAB1 MMSI 799226355  
+POSITION 32°10.0'N 034°48.0'E (Herzliya area)  
+NAVIGATION HAZARD IN AREA, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Safety,navigation_hazard,informal,RED SEA RUNNER,,306551233,10 nm offshore of Herzliya Marina,,,True,SECURITE,SECURITE,"Securite, securite, securite — RED SEA RUNNER, mmsi 306551233. Navigation hazard: we’ve got a large floating object/debris in the water at 10 nm offshore of Herzliya Marina, hard to see until you’re right on it. All vessels keep a sharp lookout and give this area a wide berth."
+Safety,floating_debris,third_party,SEA BREEZE,4XCD2,457553274,Ashdod Port,strong wind,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY RELAY, SECURITE RELAY RELAY RELAY, SECURITE RELAY RELAY RELAY. THIS IS SILVER HORIZON. RECEIVED SECURITE RELAY FROM SEA BREEZE, CALL SIGN 4XCD2, MMSI 457553274. REPORTING FLOATING DEBRIS HAZARD IN THE WATER IN POSITION Ashdod Port. WEATHER STRONG WIND. OVER."
+Safety,storm_warning,informal,,,276428684,10 nm offshore of Herzliya Marina,,6 PERSONS ON BOARD,False,NONE,,"All stations, all stations—storm warning out here, we’re 10 nm offshore of Herzliya Marina. MMSI 276428684. 6 PERSONS ON BOARD. Sea’s getting nasty fast, we’re trying to stay safe, any nearby traffic keep clear and advise."
+Safety,navigation_hazard,third_party,RED SEA RUNNER,4XLM6,412406764,Ashdod Port,poor visibility,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY, SECURITE RELAY RELAY, SECURITE RELAY RELAY
+
+THIS IS COASTAL WATCHER. RECEIVED SECURITE RELAY FROM RED SEA RUNNER, CALL SIGN 4XLM6, MMSI 412406764. REPORTING A NAVIGATION HAZARD IN THE VICINITY OF Ashdod Port. WEATHER IS POOR VISIBILITY. ALL STATIONS ARE ADVISED TO PROCEED WITH CAUTION. OVER"
+Safety,navigation_hazard,formal,GALILEE STAR,4XCD2,276675731,32°28.0'N 034°52.0'E (Hadera area),rough seas,2 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XCD2 MMSI 276675731  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+NAVIGATION HAZARD REPORTED IN VICINITY, ROUGH SEAS  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Safety,navigation_hazard,third_party,RED SEA RUNNER,4XEF3,671537429,Eilat Marina,rough seas,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY, SECURITE RELAY RELAY, SECURITE RELAY RELAY
+
+THIS IS COASTAL WATCHER. RECEIVED SECURITE RELAY FROM RED SEA RUNNER, CALL SIGN 4XEF3, MMSI 671537429. REPORTING A NAVIGATION HAZARD IN THE VICINITY OF Eilat Marina. WEATHER ROUGH SEAS. OVER"
+Safety,floating_debris,informal,,,,Hadera power station area,,3 PERSONS ON BOARD,True,SECURITE,SECURITE,"Securite, securite, securite. Warning to all stations in the Hadera power station area — we’ve got floating debris in the water, looks dangerous for navigation. Keep a sharp lookout and slow down, possible collision hazard. We have 3 persons on board."
+Safety,navigation_hazard,third_party,RED SEA RUNNER,4XJK5,222275263,Hadera power station area,choppy waves,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY, SECURITE RELAY RELAY, SECURITE RELAY RELAY. This is Sea Watcher. RECEIVED SECURITE RELAY FROM RED SEA RUNNER. Navigation hazard reported in the Hadera power station area. Weather: choppy waves. OVER"
+Safety,navigation_hazard,formal,MEDITERRANEAN DREAM,4XJK5,674840200,32°19.0'N 034°51.0'E (Netanya area),heavy rain,2 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS MEDITERRANEAN DREAM, MEDITERRANEAN DREAM, MEDITERRANEAN DREAM  
+CALL SIGN 4XJK5 MMSI 674840200  
+POSITION 32°19.0'N 034°51.0'E (Netanya area)  
+NAVIGATION HAZARD REPORTED IN VICINITY, HEAVY RAIN REDUCING VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,informal,,,,Eilat Marina,,4 PERSONS ON BOARD,False,NONE,,"Eilat Marina, anyone listening—there’s a storm warning coming through and we’ve got 4 persons on board, we’re trying to get secured right now, need advice or assistance if conditions worsen, please respond."
+Safety,navigation_hazard,informal,,,633979662,5 nm west of Haifa,,5 PERSONS ON BOARD,False,NONE,,"All stations, all stations—there’s a navigation hazard 5 nm west of Haifa. Floating debris/obstruction in the water, nearly hit it. Keep a sharp lookout and slow down in the area. MMSI 633979662. 5 PERSONS ON BOARD."
+Safety,storm_warning,informal,,4XCD2,486749454,5 nm west of Tel Aviv,,,True,SECURITE,SECURITE,"Securite, securite, securite. All stations, all stations—storm warning. We’re at 5 nm west of Tel Aviv. Call sign 4XCD2, MMSI 486749454. Conditions getting nasty fast, heavy squalls building—small craft stay clear and seek shelter immediately."
+Safety,navigation_hazard,third_party,MEDITERRANEAN DREAM,4XAB1,230998324,10 nm offshore of Herzliya Marina,choppy waves,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY, SECURITE RELAY, SECURITE RELAY. THIS IS SILVER HARBOR. RECEIVED SECURITE RELAY FROM MEDITERRANEAN DREAM, CALL SIGN 4XAB1, MMSI 230998324. REPORTING NAVIGATION HAZARD IN VICINITY OF 10 nm offshore of Herzliya Marina. WEATHER CHOPPY WAVES. OVER."
+Safety,floating_debris,third_party,SEA BREEZE,4XJK5,638076670,10 nm offshore of Herzliya Marina,rough seas,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY, SECURITE RELAY RELAY, SECURITE RELAY RELAY. I am MOTOR VESSEL SILVER DAWN. RECEIVED SECURITE RELAY FROM SEA BREEZE, call sign 4XJK5, MMSI 638076670. Reporting floating debris hazard in rough seas. Position: 10 nm offshore of Herzliya Marina. All stations in vicinity keep a sharp lookout and proceed with caution. OVER"
+Safety,storm_warning,formal,COASTAL SPIRIT,4XCD2,735126623,32°28.0'N 034°52.0'E (Hadera area),choppy waves,3 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XCD2 MMSI 735126623  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+STORM WARNING IN AREA WITH CHOPPY WAVES  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,informal,,4XCD2,,Hadera power station area,,1 PERSON ON BOARD,True,SECURITE,SECURITE,"Securite, securite, securite. All stations, all stations—storm warning for the Hadera power station area. Conditions getting nasty fast, stay clear and take shelter if you can. Call sign 4XCD2."
+Safety,navigation_hazard,third_party,GALILEE STAR,4XAB1,503696046,Hadera power station area,choppy waves,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY, SECURITE RELAY RELAY, SECURITE RELAY RELAY
+
+THIS IS OCEAN WATCHER. RECEIVED SECURITE RELAY FROM GALILEE STAR, CALL SIGN 4XAB1, MMSI 503696046. REPORTING A NAVIGATION HAZARD IN THE HADERA POWER STATION AREA. WEATHER CHOPPY WAVES. OVER"
+Safety,storm_warning,third_party,MEDITERRANEAN DREAM,4XCD2,679476614,Eilat Marina,fog,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY RELAY, SECURITE RELAY RELAY RELAY, SECURITE RELAY RELAY RELAY. THIS IS SILVER HARBOR. RECEIVED SECURITE RELAY FROM MEDITERRANEAN DREAM, CALL SIGN 4XCD2, MMSI 679476614. STORM WARNING. POSITION Eilat Marina. WEATHER FOG. OVER"
+Safety,navigation_hazard,third_party,MEDITERRANEAN DREAM,4XGH4,545505799,10 nm offshore of Herzliya Marina,strong wind,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY, SECURITE RELAY, SECURITE RELAY. RECEIVED SECURITE RELAY FROM MEDITERRANEAN DREAM. MEDITERRANEAN DREAM, call sign 4XGH4, MMSI 545505799, REPORTING A NAVIGATION HAZARD AT 10 nm offshore of Herzliya Marina. WEATHER STRONG WIND. OVER"
+Safety,floating_debris,informal,COASTAL SPIRIT,,363321843,5 nm west of Haifa,poor visibility,,True,SECURITE,SECURITE,"Securite, securite, securite. Coastal Spirit, mmsi 363321843 — we’ve got floating debris in the water 5 nm west of Haifa, poor visibility, it’s hard to see until you’re right on it. All vessels in the area slow down and keep a sharp lookout."
+Safety,floating_debris,third_party,GALILEE STAR,4XAB1,672775194,Eilat Marina,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM GALILEE STAR. GALILEE STAR, CALL SIGN 4XAB1, MMSI 672775194, REPORTING FLOATING DEBRIS HAZARD IN THE WATER AT Eilat Marina. WEATHER ROUGH SEAS. OVER"
+Safety,navigation_hazard,informal,,,626794469,Palmahim Beach,choppy waves,1 PERSON ON BOARD,False,NONE,,"Any station, any station—there’s a navigation hazard at Palmahim Beach, something in the water and it’s hard to see in these choppy waves. MMSI 626794469. I’ve got 1 PERSON ON BOARD. Keep clear and proceed with extreme caution, please."
+Safety,floating_debris,informal,BLUE HORIZON,,508570854,,strong wind,6 PERSONS ON BOARD,True,SECURITE,SECURITE,"Securite, securite, securite. BLUE HORIZON, MMSI 508570854 — strong wind out here and we’ve got floating debris in the water, looks like it could be dangerous to navigation. We’re six persons on board. Any vessels nearby keep a sharp lookout and proceed with caution."
+Safety,floating_debris,formal,COASTAL SPIRIT,4XLM6,307918827,32°28.0'N 034°52.0'E (Hadera area),poor visibility,2 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XLM6 MMSI 307918827  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+FLOATING DEBRIS IN VICINITY, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Safety,floating_debris,formal,GALILEE STAR,4XAB1,515001254,32°19.0'N 034°51.0'E (Netanya area),heavy rain,3 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XAB1 MMSI 515001254  
+POSITION 32°19.0'N 034°51.0'E (Netanya area)  
+FLOATING DEBRIS REPORTED IN VICINITY, NAVIGATION HAZARD IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Safety,navigation_hazard,formal,RED SEA RUNNER,4XGH4,393334613,31°48.0'N 034°38.0'E (Ashdod area),strong wind,2 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS RED SEA RUNNER, RED SEA RUNNER, RED SEA RUNNER  
+CALL SIGN 4XGH4 MMSI 393334613  
+POSITION 31°48.0'N 034°38.0'E (Ashdod area)  
+NAVIGATION HAZARD REPORTED IN VICINITY, STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Safety,floating_debris,informal,GALILEE STAR,,,,,6 PERSONS ON BOARD,False,NONE,,"Galilee Star calling—there’s floating debris all around us, looks like it could foul the prop or hit the hull. We’re trying to slow down and maneuver but it’s everywhere. 6 persons on board. Need assistance/advice, any vessels nearby keep clear and watch out."
+Safety,storm_warning,informal,,,,Hadera power station area,choppy waves,4 PERSONS ON BOARD,False,NONE,,"Anyone in the Hadera power station area, please listen—there’s a storm warning out here, choppy waves building fast and it’s getting nasty. We’ve got 4 PERSONS ON BOARD and we’re trying to keep clear but conditions are worsening, need nearby traffic to keep an eye out and give us a hand if we start getting into trouble."
+Safety,navigation_hazard,formal,MEDITERRANEAN DREAM,4XGH4,314518079,31°55.0'N 034°41.0'E (Palmahim area),strong wind,4 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS MEDITERRANEAN DREAM, MEDITERRANEAN DREAM, MEDITERRANEAN DREAM  
+CALL SIGN 4XGH4 MMSI 314518079  
+POSITION 31°55.0'N 034°41.0'E (PALMAHIM AREA)  
+NAVIGATION HAZARD IN VICINITY, STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Safety,navigation_hazard,informal,COASTAL SPIRIT,,,5 nm west of Haifa,,6 PERSONS ON BOARD,False,NONE,,"Coastal Spirit calling—there’s a navigation hazard, a big floating object/debris in the water at 5 nm west of Haifa. Nearly hit it, it’s hard to see and right in the track. We’ve got 6 persons on board. Any vessels in the area keep a sharp lookout and give it a wide berth."
+Safety,navigation_hazard,informal,COASTAL SPIRIT,,,,,6 PERSONS ON BOARD,False,NONE,,"Coastal Spirit calling—there’s a serious navigation hazard out here, something in the water and it’s right in the track. We’ve got 6 persons on board. Keep a sharp lookout and slow down, it’s dangerous."
+Safety,floating_debris,third_party,SEA BREEZE,4XLM6,242329671,Eilat Marina,heavy rain,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY, SECURITE RELAY, SECURITE RELAY. THIS IS SILVER HARBOR. RECEIVED SECURITE RELAY FROM SEA BREEZE, CALL SIGN 4XLM6, MMSI 242329671. REPORTING FLOATING DEBRIS IN THE WATER AT Eilat Marina. WEATHER HEAVY RAIN. OVER."
+Safety,floating_debris,third_party,BLUE HORIZON,4XAB1,516872439,Netanya coastline,heavy rain,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY, SECURITE RELAY, SECURITE RELAY. THIS IS SILVER STAR. RECEIVED SECURITE RELAY FROM BLUE HORIZON, CALL SIGN 4XAB1, MMSI 516872439. REPORTING FLOATING DEBRIS HAZARD IN THE VICINITY OF Netanya coastline. WEATHER HEAVY RAIN. ALL STATIONS ADVISED TO NAVIGATE WITH CAUTION. OVER"
+Safety,storm_warning,third_party,GALILEE STAR,4XJK5,738798023,5 nm west of Tel Aviv,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM GALILEE STAR. STORM WARNING FOR VESSEL GALILEE STAR, CALL SIGN 4XJK5, MMSI 738798023, POSITION 5 nm west of Tel Aviv. WEATHER HEAVY RAIN. OVER"
+Safety,navigation_hazard,informal,BLUE HORIZON,,,Netanya coastline,,6 PERSONS ON BOARD,True,SECURITE,SECURITE,"Securite, securite, securite — all stations, all stations. This is BLUE HORIZON. Navigation hazard off Netanya coastline: we’ve got a dangerous obstruction in the water, very close to the surface, hard to see. Keep well clear and proceed with extreme caution. We have 6 PERSONS ON BOARD."
+Safety,floating_debris,informal,,4XLM6,,Palmahim Beach,,,False,NONE,,"Coast guard, anyone on VHF—I'm at Palmahim Beach, call sign 4XLM6. There’s floating debris in the water close in, looks like it could be from a boat, drifting around and it’s a hazard. Can you send someone to check it out?"
+Safety,navigation_hazard,informal,,,,Hadera power station area,poor visibility,,True,SECURITE,SECURITE,"Securite, securite, securite. Navigation hazard in Hadera power station area — there’s an unlit object/debris in the water, hard to see in poor visibility. All vessels keep sharp lookout, slow down and give the area a wide berth."
+Safety,floating_debris,formal,SEA BREEZE,4XAB1,526808977,31°48.0'N 034°38.0'E (Ashdod area),poor visibility,1 PERSON ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XAB1 MMSI 526808977  
+POSITION 31°48.0'N 034°38.0'E (Ashdod area)  
+FLOATING DEBRIS REPORTED IN VICINITY, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+1 PERSON ON BOARD  
+OVER."
+Safety,navigation_hazard,third_party,BLUE HORIZON,4XGH4,687096273,Netanya coastline,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM BLUE HORIZON, CALL SIGN 4XGH4, MMSI 687096273. REPORTING NAVIGATION HAZARD INVOLVING BLUE HORIZON AT POSITION Netanya coastline. WEATHER HEAVY RAIN. OVER"
+Safety,storm_warning,formal,MEDITERRANEAN DREAM,4XLM6,306323670,32°19.0'N 034°51.0'E (Netanya area),poor visibility,5 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS MEDITERRANEAN DREAM, MEDITERRANEAN DREAM, MEDITERRANEAN DREAM  
+CALL SIGN 4XLM6 MMSI 306323670  
+POSITION 32°19.0'N 034°51.0'E (NETANYA AREA)  
+STORM WARNING IN AREA, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,formal,COASTAL SPIRIT,4XEF3,433291547,32°10.0'N 034°48.0'E (Herzliya area),poor visibility,4 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XEF3 MMSI 433291547  
+POSITION 32°10.0'N 034°48.0'E (Herzliya area)  
+STORM WARNING IN EFFECT, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,formal,COASTAL SPIRIT,4XEF3,784615760,32°49.0'N 034°59.0'E (Haifa area),choppy waves,3 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XEF3 MMSI 784615760  
+POSITION 32°49.0'N 034°59.0'E (Haifa area)  
+STORM WARNING IN AREA, CHOPPY WAVES  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,informal,RED SEA RUNNER,4XAB1,254308262,,,,True,SECURITE,SECURITE,"Securite, securite, securite — RED SEA RUNNER, call sign 4XAB1, MMSI 254308262. Storm warning in effect, conditions expected to get nasty fast. All vessels in the area, secure gear, reduce speed, keep a sharp watch and be ready for heavy weather."
+Safety,floating_debris,formal,RED SEA RUNNER,4XCD2,273669588,32°10.0'N 034°48.0'E (Herzliya area),fog,2 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE. THIS IS RED SEA RUNNER, RED SEA RUNNER, RED SEA RUNNER. CALL SIGN 4XCD2 MMSI 273669588. POSITION 32°10.0'N 034°48.0'E (HERZLIYA AREA). FLOATING DEBRIS REPORTED IN THE AREA, NAVIGATION HAZARD IN FOG. REQUIRE IMMEDIATE ASSISTANCE. 2 PERSONS ON BOARD. OVER."
+Safety,floating_debris,informal,,4XJK5,469137895,5 nm west of Haifa,strong wind,1 PERSON ON BOARD,True,SECURITE,SECURITE,"Securite, securite, securite. Station calling, this is call sign 4XJK5, mmsi 469137895. I’m 5 nm west of Haifa and there’s floating debris in the water, looks dangerous for navigation, hard to avoid in this strong wind. Any vessels nearby slow down and keep sharp lookout."
+Safety,floating_debris,formal,RED SEA RUNNER,4XEF3,216944811,32°49.0'N 034°59.0'E (Haifa area),strong wind,3 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS RED SEA RUNNER, RED SEA RUNNER, RED SEA RUNNER  
+CALL SIGN 4XEF3 MMSI 216944811  
+POSITION 32°49.0'N 034°59.0'E (HAIFA AREA)  
+FLOATING DEBRIS REPORTED IN VICINITY, STRONG WIND AFFECTING NAVIGATION  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,third_party,MEDITERRANEAN DREAM,4XJK5,322030010,Ashdod Port,choppy waves,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY, SECURITE RELAY RELAY, SECURITE RELAY RELAY
+
+THIS IS SILVER HARBOR RADIO RELAYING. RECEIVED SECURITE RELAY FROM MEDITERRANEAN DREAM, CALL SIGN 4XJK5, MMSI 322030010. STORM WARNING. POSITION Ashdod Port. WEATHER CHOPPY WAVES. OVER"
+Safety,storm_warning,informal,,,759903980,Hadera power station area,,,False,NONE,,"All stations, all stations—storm warning in the Hadera power station area. Conditions getting nasty fast, heavy seas and strong wind coming in. If you’re nearby, clear out and take shelter now, this is getting dangerous. MMSI 759903980."
+Safety,storm_warning,formal,SEA BREEZE,4XGH4,631233244,31°48.0'N 034°38.0'E (Ashdod area),poor visibility,6 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XGH4 MMSI 631233244  
+POSITION 31°48.0'N 034°38.0'E (Ashdod area)  
+STORM WARNING IN AREA, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+6 PERSONS ON BOARD  
+OVER."
+Safety,floating_debris,third_party,MEDITERRANEAN DREAM,4XAB1,286748119,5 nm west of Tel Aviv,heavy rain,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY, SECURITE RELAY, SECURITE RELAY. THIS IS BLUE HORIZON. RECEIVED SECURITE RELAY FROM MEDITERRANEAN DREAM, CALL SIGN 4XAB1, MMSI 286748119. REPORTING FLOATING DEBRIS IN THE WATER AT 5 nm west of Tel Aviv. WEATHER HEAVY RAIN. OVER"
+Safety,storm_warning,third_party,COASTAL SPIRIT,4XJK5,788793237,Palmahim Beach,choppy waves,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED MESSAGE FROM COASTAL SPIRIT. This is Silver Horizon relaying a storm warning concerning COASTAL SPIRIT, call sign 4XJK5, MMSI 788793237. Position: Palmahim Beach. Weather reported: choppy waves. OVER"
+Safety,floating_debris,third_party,GALILEE STAR,4XGH4,742831335,Netanya coastline,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM GALILEE STAR. GALILEE STAR, CALL SIGN 4XGH4, MMSI 742831335, REPORTING FLOATING DEBRIS HAZARD IN THE WATER. POSITION REPORTED AS Netanya coastline. WEATHER FOG. OVER"
+Safety,storm_warning,formal,COASTAL SPIRIT,4XLM6,791991695,32°19.0'N 034°51.0'E (Netanya area),choppy waves,2 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XLM6 MMSI 791991695  
+POSITION 32°19.0'N 034°51.0'E (Netanya area)  
+STORM WARNING IN AREA, CHOPPY WAVES  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,formal,MEDITERRANEAN DREAM,4XEF3,686940738,31°48.0'N 034°38.0'E (Ashdod area),poor visibility,4 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS MEDITERRANEAN DREAM, MEDITERRANEAN DREAM, MEDITERRANEAN DREAM  
+CALL SIGN 4XEF3 MMSI 686940738  
+POSITION 31°48.0'N 034°38.0'E (ASHDOD AREA)  
+STORM WARNING IN AREA WITH POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,informal,SEA BREEZE,,,Ashdod Port,,,True,SECURITE,SECURITE,"Securite, securite, securite. All stations, all stations—this is SEA BREEZE at Ashdod Port. Storm warning, conditions building fast, strong winds and rough seas expected. Any traffic near Ashdod Port, keep clear and proceed with extreme caution."
+Safety,navigation_hazard,third_party,GALILEE STAR,4XCD2,797398528,Palmahim Beach,rough seas,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY, SECURITE RELAY RELAY, SECURITE RELAY RELAY. THIS IS COAST RADIO OPERATOR HARRIS. RECEIVED SECURITE RELAY FROM GALILEE STAR, CALL SIGN 4XCD2, MMSI 797398528. NAVIGATION HAZARD REPORTED IN VICINITY OF Palmahim Beach. WEATHER ROUGH SEAS. OVER."
+Safety,navigation_hazard,informal,,,,Ashdod Port,heavy rain,3 PERSONS ON BOARD,True,SECURITE,SECURITE,"Securite, securite, securite — all stations, hazard warning at Ashdod Port. There’s a serious navigation hazard in the port area, hard to see in heavy rain. Keep sharp lookout, slow down and proceed with extreme caution. We have 3 PERSONS ON BOARD."
+Safety,floating_debris,formal,COASTAL SPIRIT,4XGH4,440781088,31°55.0'N 034°41.0'E (Palmahim area),rough seas,3 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XGH4 MMSI 440781088  
+POSITION 31°55.0'N 034°41.0'E (PALMAHIM AREA)  
+FLOATING DEBRIS REPORTED IN VICINITY, HAZARD TO NAVIGATION IN ROUGH SEAS  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Safety,floating_debris,informal,COASTAL SPIRIT,4XJK5,228189836,Hadera power station area,fog,,True,SECURITE,SECURITE,"Securite, securite, securite. Coastal Spirit, call sign 4XJK5, MMSI 228189836. We’ve got floating debris in the Hadera power station area, hard to see in this fog—looks like it could foul a prop or hit a hull. All vessels keep sharp lookout and proceed with extreme caution."
+Safety,floating_debris,third_party,GALILEE STAR,4XEF3,576908532,5 nm west of Tel Aviv,rough seas,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY RELAY, SECURITE RELAY RELAY, SECURITE RELAY RELAY. THIS IS SEABIRD RADIO. RECEIVED SECURITE RELAY FROM GALILEE STAR. REPORTING FLOATING DEBRIS IN THE AREA. POSITION 5 nm west of Tel Aviv. WEATHER ROUGH SEAS. OVER."
+Safety,floating_debris,informal,MEDITERRANEAN DREAM,,,,heavy rain,,True,SECURITE,SECURITE,"Securite, securite, securite — MEDITERRANEAN DREAM. Heavy rain out here and we’ve got floating debris in the water, hard to see, looks dangerous for navigation. All vessels in the area keep a sharp lookout and slow down."
+Safety,floating_debris,third_party,GALILEE STAR,4XJK5,291221925,5 nm west of Tel Aviv,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM GALILEE STAR. GALILEE STAR, CALL SIGN 4XJK5, MMSI 291221925, REPORTING FLOATING DEBRIS HAZARD IN ROUGH SEAS. POSITION 5 nm west of Tel Aviv. OVER"
+Safety,storm_warning,formal,COASTAL SPIRIT,4XAB1,492168202,32°19.0'N 034°51.0'E (Netanya area),poor visibility,6 PERSONS ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XAB1 MMSI 492168202  
+POSITION 32°19.0'N 034°51.0'E (NETANYA AREA)  
+STORM WARNING IN AREA WITH POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+6 PERSONS ON BOARD  
+OVER."
+Safety,storm_warning,third_party,MEDITERRANEAN DREAM,4XGH4,493310667,Ashdod Port,strong wind,POB UNKNOWN,True,SECURITE,SECURITE RELAY,"SECURITE RELAY, SECURITE RELAY, SECURITE RELAY. THIS IS SILVER HORIZON RELAYING. RECEIVED SECURITE RELAY FROM MEDITERRANEAN DREAM, CALL SIGN 4XGH4, MMSI 493310667. STORM WARNING REPORTED AT Ashdod Port. WEATHER: strong wind. OVER."
+Safety,storm_warning,informal,,,258821683,10 nm offshore of Herzliya Marina,,1 PERSON ON BOARD,False,NONE,,"Coast guard, anyone listening—there’s a storm warning out here, I’m 10 nm offshore of Herzliya Marina, mmsi 258821683, 1 person on board. I’m getting hit hard and I need help, please respond."
+Safety,navigation_hazard,formal,GALILEE STAR,4XEF3,552318696,29°33.0'N 034°57.0'E (Eilat area),rough seas,1 PERSON ON BOARD,True,SECURITE,SECURITE,"SECURITE, SECURITE, SECURITE  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XEF3 MMSI 552318696  
+POSITION 29°33.0'N 034°57.0'E (EILAT AREA)  
+NAVIGATION HAZARD REPORTED IN VICINITY, ROUGH SEAS  
+REQUIRE IMMEDIATE ASSISTANCE  
+1 PERSON ON BOARD  
+OVER."
+Urgency,drifting,informal,SEA BREEZE,4XGH4,245421708,,,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. Sea Breeze, call sign 4XGH4, MMSI 245421708. We’re drifting, no control, can’t hold position and getting pushed along. Need assistance or a tow, please respond."
+Urgency,drifting,formal,GALILEE STAR,4XJK5,660940492,32°19.0'N 034°51.0'E (Netanya area),fog,4 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XJK5 MMSI 660940492  
+POSITION 32°19.0'N 034°51.0'E (NETANYA AREA)  
+WE ARE DRIFTING IN FOG  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Urgency,medical_issue,formal,MEDITERRANEAN DREAM,4XAB1,548717183,29°33.0'N 034°57.0'E (Eilat area),strong wind,5 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS MEDITERRANEAN DREAM, MEDITERRANEAN DREAM, MEDITERRANEAN DREAM  
+CALL SIGN 4XAB1 MMSI 548717183  
+POSITION 29°33.0'N 034°57.0'E (EILAT AREA)  
+MEDICAL ISSUE ON BOARD  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Urgency,engine_failure,informal,,,,Palmahim Beach,heavy rain,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan—any station, any station, we’ve got engine failure at Palmahim Beach, we’re dead in the water and drifting, heavy rain, need assistance fast."
+Urgency,drifting,formal,SEA BREEZE,4XJK5,322435172,32°10.0'N 034°48.0'E (Herzliya area),fog,5 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XJK5 MMSI 322435172  
+POSITION 32°10.0'N 034°48.0'E (Herzliya area)  
+WE ARE DRIFTING IN FOG  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Urgency,engine_failure,informal,RED SEA RUNNER,,,,strong wind,6 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan… RED SEA RUNNER—our engine’s failed, we’re dead in the water and getting pushed around in strong wind. We’ve got 6 persons on board and we need assistance, please."
+Urgency,medical_issue,third_party,MEDITERRANEAN DREAM,4XGH4,682008349,Palmahim Beach,choppy waves,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY
+
+THIS IS SEA WATCHER. RECEIVED PAN PAN RELAY FROM MEDITERRANEAN DREAM, CALL SIGN 4XGH4, MMSI 682008349. REPORTING A MEDICAL ISSUE ON BOARD. POSITION: Palmahim Beach. WEATHER: choppy waves. OVER"
+Urgency,drifting,informal,,,,Hadera power station area,,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan — we’re drifting in the Hadera power station area, no control, getting pushed around and can’t hold position. Need assistance urgently, anyone nearby can help tow or stand by?"
+Urgency,drifting,formal,GALILEE STAR,4XEF3,282389284,32°19.0'N 034°51.0'E (Netanya area),choppy waves,1 PERSON ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XEF3 MMSI 282389284  
+POSITION 32°19.0'N 034°51.0'E (Netanya area)  
+WE ARE DRIFTING AND UNABLE TO MAKE WAY, CHOPPY WAVES  
+REQUIRE IMMEDIATE ASSISTANCE  
+1 PERSON ON BOARD  
+OVER."
+Urgency,drifting,third_party,RED SEA RUNNER,4XLM6,244047803,10 nm offshore of Herzliya Marina,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED  FROM RED SEA RUNNER. RED SEA RUNNER, call sign 4XLM6, MMSI 244047803, is drifting at 10 nm offshore of Herzliya Marina. Weather reported as poor visibility. OVER"
+Urgency,medical_issue,third_party,BLUE HORIZON,4XAB1,683745511,Palmahim Beach,rough seas,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Coastal Watcher. RECEIVED PAN PAN RELAY FROM BLUE HORIZON, call sign 4XAB1, MMSI 683745511. Medical issue reported on board. Position: Palmahim Beach. Weather: rough seas. OVER."
+Urgency,drifting,third_party,BLUE HORIZON,4XAB1,466012797,Eilat Marina,choppy waves,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is SEA WATCHER. RECEIVED PAN PAN FROM BLUE HORIZON, call sign 4XAB1, MMSI 466012797. BLUE HORIZON is drifting at Eilat Marina. Weather reported as choppy waves. OVER."
+Urgency,drifting,third_party,BLUE HORIZON,4XEF3,600346767,Netanya coastline,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM BLUE HORIZON, CALL SIGN 4XEF3, MMSI 600346767. BLUE HORIZON IS DRIFTING AT Netanya coastline. WEATHER HEAVY RAIN. OVER"
+Urgency,engine_failure,third_party,RED SEA RUNNER,4XAB1,559327003,Palmahim Beach,rough seas,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY RELAY RELAY, PAN PAN RELAY RELAY RELAY, PAN PAN RELAY RELAY RELAY. This is Sea Watcher. RECEIVED PAN PAN RELAY FROM RED SEA RUNNER, call sign 4XAB1, MMSI 559327003. RED SEA RUNNER reports engine failure at Palmahim Beach. Weather reported as rough seas. OVER"
+Urgency,drifting,informal,RED SEA RUNNER,4XLM6,,Palmahim Beach,strong wind,,False,NONE,,"Red Sea Runner, call sign 4XLM6… we’re drifting off Palmahim Beach, strong wind pushing us, we can’t hold position and we’re getting blown along—need assistance before we end up on the beach or into danger."
+Urgency,drifting,third_party,COASTAL SPIRIT,4XGH4,338460786,Ashdod Port,fog,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY RELAY RELAY, PAN PAN RELAY RELAY RELAY, PAN PAN RELAY RELAY RELAY. THIS IS RIVERSTONE. RECEIVED PAN PAN FROM COASTAL SPIRIT, CALL SIGN 4XGH4, MMSI 338460786. COASTAL SPIRIT IS DRIFTING AT Ashdod Port. WEATHER IS FOG. OVER"
+Urgency,medical_issue,third_party,GALILEE STAR,4XCD2,765210546,Netanya coastline,rough seas,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Michael Shore relaying. RECEIVED PAN PAN FROM GALILEE STAR, call sign 4XCD2, MMSI 765210546. Medical issue reported on board. Position: Netanya coastline. Weather: rough seas. OVER"
+Urgency,engine_failure,informal,,,366371119,Hadera power station area,rough seas,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. We’ve got engine failure, dead in the water in the Hadera power station area. MMSI 366371119. Rough seas, we’re getting pushed around and can’t make way—need assistance ASAP."
+Urgency,medical_issue,third_party,COASTAL SPIRIT,4XJK5,240531056,Palmahim Beach,choppy waves,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY RECEIVED PAN PAN FROM COASTAL SPIRIT. THIS IS HARBOR WATCHER. COASTAL SPIRIT, CALL SIGN 4XJK5, MMSI 240531056, REPORTING A MEDICAL ISSUE. POSITION Palmahim Beach. WEATHER choppy waves. OVER"
+Urgency,drifting,informal,SEA BREEZE,4XGH4,591163514,10 nm offshore of Herzliya Marina,,,False,NONE,,"Sea Breeze, call sign 4XGH4, MMSI 591163514… we’re drifting, no propulsion, can’t hold position. We’re 10 nm offshore of Herzliya Marina. Need assistance fast, we’re getting pushed around and can’t control the boat."
+Urgency,drifting,third_party,MEDITERRANEAN DREAM,4XCD2,773390109,Hadera power station area,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM MEDITERRANEAN DREAM. MEDITERRANEAN DREAM, CALL SIGN 4XCD2, MMSI 773390109, IS DRIFTING IN Hadera power station area. WEATHER: strong wind. OVER"
+Urgency,medical_issue,formal,GALILEE STAR,4XLM6,673087862,32°19.0'N 034°51.0'E (Netanya area),poor visibility,3 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XLM6 MMSI 673087862  
+POSITION 32°19.0'N 034°51.0'E (NETANYA AREA)  
+MEDICAL ISSUE ON BOARD, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Urgency,drifting,third_party,MEDITERRANEAN DREAM,4XCD2,414423806,5 nm west of Tel Aviv,fog,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is SEA WATCHER. RECEIVED PAN PAN FROM MEDITERRANEAN DREAM. Vessel MEDITERRANEAN DREAM, call sign 4XCD2, MMSI 414423806, is drifting in fog. Position 5 nm west of Tel Aviv. OVER"
+Urgency,medical_issue,informal,,4XCD2,,Eilat Marina,,3 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. Call sign 4XCD2. We’re at Eilat Marina, 3 persons on board. Medical issue onboard—one person is in bad shape and needs urgent medical help now. Please advise and send assistance."
+Urgency,drifting,informal,MEDITERRANEAN DREAM,4XJK5,,10 nm offshore of Herzliya Marina,heavy rain,,False,NONE,,"Mediterranean Dream, call sign 4XJK5… we’re drifting, no propulsion, getting pushed around. Position 10 nm offshore of Herzliya Marina. Heavy rain, visibility bad, we can’t hold course. Need assistance fast, we’re not making way."
+Urgency,drifting,informal,,,,5 nm west of Haifa,,,False,NONE,,"Coast Guard, anyone receiving—I'm drifting, no power, can't hold position. Location: 5 nm west of Haifa. Need assistance before I get pushed further."
+Urgency,engine_failure,informal,GALILEE STAR,,,,,2 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan — GALILEE STAR. Engine failure, we’ve lost propulsion and we’re drifting. 2 persons on board. Need assistance, please."
+Urgency,engine_failure,third_party,RED SEA RUNNER,4XJK5,654466340,Hadera power station area,rough seas,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Sea Watcher. RECEIVED PAN PAN FROM RED SEA RUNNER. Vessel RED SEA RUNNER, call sign 4XJK5, MMSI 654466340, reports engine failure and is unable to make way. Position: Hadera power station area. Weather: rough seas. OVER"
+Urgency,medical_issue,formal,BLUE HORIZON,4XGH4,690822013,29°33.0'N 034°57.0'E (Eilat area),rough seas,1 PERSON ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XGH4 MMSI 690822013  
+POSITION 29°33.0'N 034°57.0'E (EILAT AREA)  
+MEDICAL ISSUE ON BOARD, ONE PERSON REQUIRES URGENT MEDICAL ASSISTANCE, ROUGH SEAS  
+REQUIRE IMMEDIATE ASSISTANCE  
+1 PERSON ON BOARD  
+OVER."
+Urgency,medical_issue,third_party,SEA BREEZE,4XLM6,753380476,10 nm offshore of Herzliya Marina,fog,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Michael Carter. RECEIVED PAN PAN FROM SEA BREEZE, call sign 4XLM6, MMSI 753380476. Medical issue reported on board. Position: 10 nm offshore of Herzliya Marina. Weather: fog. OVER."
+Urgency,medical_issue,informal,,4XEF3,,Ashdod Port,,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. This is call sign 4XEF3 at Ashdod Port—medical emergency onboard, person collapsed and not responding properly, we need urgent medical assistance and ambulance to the berth now."
+Urgency,medical_issue,third_party,RED SEA RUNNER,4XAB1,619246503,5 nm west of Haifa,poor visibility,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is SEA WATCHER. RECEIVED PAN PAN FROM RED SEA RUNNER, call sign 4XAB1, MMSI 619246503. Reported medical issue on board. Position 5 nm west of Haifa. Weather poor visibility. OVER."
+Urgency,engine_failure,informal,RED SEA RUNNER,4XLM6,557039137,,,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan — RED SEA RUNNER, call sign 4XLM6, mmsi 557039137. Engine failure, we’ve lost propulsion and we’re drifting, need assistance/tow as soon as possible."
+Urgency,medical_issue,third_party,GALILEE STAR,4XLM6,388000513,Eilat Marina,choppy waves,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Sea Watcher. RECEIVED PAN PAN FROM GALILEE STAR. Medical issue on board. Position: Eilat Marina. Weather: choppy waves. OVER."
+Urgency,engine_failure,formal,BLUE HORIZON,4XAB1,691429705,32°10.0'N 034°48.0'E (Herzliya area),rough seas,3 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XAB1 MMSI 691429705  
+POSITION 32°10.0'N 034°48.0'E (Herzliya area)  
+ENGINE FAILURE, ADRIFT IN ROUGH SEAS  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Urgency,drifting,formal,SEA BREEZE,4XEF3,532941445,29°33.0'N 034°57.0'E (Eilat area),fog,4 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XEF3 MMSI 532941445  
+POSITION 29°33.0'N 034°57.0'E (EILAT AREA)  
+WE ARE DRIFTING IN FOG  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Urgency,drifting,formal,COASTAL SPIRIT,4XCD2,507209235,31°55.0'N 034°41.0'E (Palmahim area),heavy rain,1 PERSON ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XCD2 MMSI 507209235  
+POSITION 31°55.0'N 034°41.0'E (PALMAHIM AREA)  
+WE ARE DRIFTING IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+1 PERSON ON BOARD  
+OVER."
+Urgency,drifting,formal,GALILEE STAR,4XGH4,629520110,32°19.0'N 034°51.0'E (Netanya area),choppy waves,4 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XGH4 MMSI 629520110  
+POSITION 32°19.0'N 034°51.0'E (NETANYA AREA)  
+WE ARE DRIFTING, UNABLE TO MAKE WAY, CHOPPY WAVES  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Urgency,engine_failure,formal,MEDITERRANEAN DREAM,4XLM6,734211672,32°28.0'N 034°52.0'E (Hadera area),heavy rain,5 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS MEDITERRANEAN DREAM, MEDITERRANEAN DREAM, MEDITERRANEAN DREAM  
+CALL SIGN 4XLM6 MMSI 734211672  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+ENGINE FAILURE, VESSEL DISABLED AND UNABLE TO MAKE WAY, HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Urgency,medical_issue,third_party,MEDITERRANEAN DREAM,4XAB1,662360908,5 nm west of Tel Aviv,fog,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY
+
+THIS IS SILVER HORIZON. RECEIVED PAN PAN FROM MEDITERRANEAN DREAM, CALL SIGN 4XAB1, MMSI 662360908. MEDICAL ISSUE ON BOARD. POSITION 5 nm west of Tel Aviv. WEATHER FOG. OVER"
+Urgency,engine_failure,formal,SEA BREEZE,4XEF3,517440983,32°19.0'N 034°51.0'E (Netanya area),heavy rain,4 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XEF3 MMSI 517440983  
+POSITION 32°19.0'N 034°51.0'E (Netanya area)  
+ENGINE FAILURE, ADRIFT IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Urgency,medical_issue,third_party,MEDITERRANEAN DREAM,4XEF3,680101819,Palmahim Beach,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED  FROM MEDITERRANEAN DREAM, CALL SIGN 4XEF3, MMSI 680101819. REPORTING A MEDICAL ISSUE ON BOARD. POSITION Palmahim Beach. WEATHER ROUGH SEAS. OVER"
+Urgency,engine_failure,informal,,,,5 nm west of Tel Aviv,choppy waves,6 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. We’ve got engine failure, dead in the water at 5 nm west of Tel Aviv. 6 PERSONS ON BOARD. Choppy waves, we’re drifting and can’t get the engine to restart—need assistance ASAP."
+Urgency,engine_failure,third_party,COASTAL SPIRIT,4XGH4,237365109,Ashdod Port,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM COASTAL SPIRIT. This is Seawatch Delta relaying: COASTAL SPIRIT, call sign 4XGH4, MMSI 237365109, reports engine failure at Ashdod Port. Weather reported as strong wind. OVER"
+Urgency,medical_issue,informal,,,,Ashdod Port,poor visibility,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. We’ve got a medical issue at Ashdod Port, urgent assistance needed right now. Poor visibility here, please send medical help immediately."
+Urgency,drifting,informal,,4XGH4,,Ashdod Port,fog,,False,NONE,,"Ashdod Port, this is call sign 4XGH4… we’re drifting, no control, can’t hold position in this fog, getting pushed around and I can’t see traffic—need assistance now."
+Urgency,engine_failure,third_party,MEDITERRANEAN DREAM,4XCD2,506635834,Eilat Marina,choppy waves,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. THIS IS SILVER HARBOR. RECEIVED PAN PAN RELAY FROM MEDITERRANEAN DREAM, CALL SIGN 4XCD2, MMSI 506635834. REPORTING ENGINE FAILURE AT Eilat Marina. WEATHER CHOPPY WAVES. OVER."
+Urgency,medical_issue,formal,MEDITERRANEAN DREAM,4XCD2,677934499,31°55.0'N 034°41.0'E (Palmahim area),rough seas,6 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS MEDITERRANEAN DREAM, MEDITERRANEAN DREAM, MEDITERRANEAN DREAM  
+CALL SIGN 4XCD2 MMSI 677934499  
+POSITION 31°55.0'N 034°41.0'E (Palmahim area)  
+MEDICAL ISSUE ON BOARD, CREW MEMBER REQUIRES URGENT MEDICAL ASSISTANCE, ROUGH SEAS  
+REQUIRE IMMEDIATE ASSISTANCE  
+6 PERSONS ON BOARD  
+OVER."
+Urgency,engine_failure,informal,,,386928799,10 nm offshore of Herzliya Marina,,3 PERSONS ON BOARD,False,NONE,,"Coast Guard, anyone copy? Our engine just died, we’re dead in the water at 10 nm offshore of Herzliya Marina. MMSI 386928799. 3 PERSONS ON BOARD. We need assistance, we’re drifting and can’t restart."
+Urgency,drifting,formal,BLUE HORIZON,4XGH4,228222260,31°55.0'N 034°41.0'E (Palmahim area),heavy rain,5 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XGH4 MMSI 228222260  
+POSITION 31°55.0'N 034°41.0'E (PALMAHIM AREA)  
+WE ARE DRIFTING IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Urgency,drifting,third_party,BLUE HORIZON,4XJK5,292573170,Hadera power station area,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM BLUE HORIZON, CALL SIGN 4XJK5, MMSI 292573170. BLUE HORIZON IS DRIFTING IN Hadera power station area. WEATHER REPORTED AS ROUGH SEAS. OVER"
+Urgency,engine_failure,third_party,MEDITERRANEAN DREAM,4XJK5,641087900,Ashdod Port,poor visibility,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM MEDITERRANEAN DREAM, CALL SIGN 4XJK5, MMSI 641087900. REPORTING ENGINE FAILURE AT POSITION Ashdod Port. WEATHER: POOR VISIBILITY. OVER"
+Urgency,engine_failure,third_party,SEA BREEZE,4XGH4,700184588,Palmahim Beach,choppy waves,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM SEA BREEZE, CALL SIGN 4XGH4, MMSI 700184588. REPORTING ENGINE FAILURE AT Palmahim Beach. PERSONS ON BOARD NOT CONFIRMED. WEATHER CHOPPY WAVES. THIS IS SILVER HARBOR STATION RELAYING. OVER."
+Urgency,medical_issue,third_party,COASTAL SPIRIT,4XJK5,395381429,Netanya coastline,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM COASTAL SPIRIT, CALL SIGN 4XJK5, MMSI 395381429. REPORTING A MEDICAL ISSUE ON BOARD. POSITION Netanya coastline. WEATHER strong wind. OVER"
+Urgency,drifting,formal,SEA BREEZE,4XJK5,364299106,32°04.0'N 034°46.0'E (Tel Aviv area),heavy rain,2 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XJK5 MMSI 364299106  
+POSITION 32°04.0'N 034°46.0'E (TEL AVIV AREA)  
+WE ARE DRIFTING IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Urgency,drifting,third_party,BLUE HORIZON,4XEF3,757162259,Ashdod Port,heavy rain,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. THIS IS SEAGULL WATCH. RECEIVED PAN PAN RELAY FROM BLUE HORIZON, CALL SIGN 4XEF3, MMSI 757162259. BLUE HORIZON IS DRIFTING AT Ashdod Port. WEATHER HEAVY RAIN. OVER"
+Urgency,medical_issue,third_party,GALILEE STAR,4XCD2,525155441,Ashdod Port,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM GALILEE STAR, call sign 4XCD2, MMSI 525155441. Reported medical issue on board. Position: Ashdod Port. Weather reported as fog. OVER"
+Urgency,medical_issue,third_party,RED SEA RUNNER,4XCD2,383825267,Palmahim Beach,choppy waves,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Coastal Watcher. RECEIVED PAN PAN RELAY FROM RED SEA RUNNER, call sign 4XCD2, MMSI 383825267. Medical issue reported on board. Position Palmahim Beach. Weather choppy waves. OVER"
+Urgency,medical_issue,formal,SEA BREEZE,4XAB1,484172112,32°19.0'N 034°51.0'E (Netanya area),choppy waves,2 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XAB1 MMSI 484172112  
+POSITION 32°19.0'N 034°51.0'E (Netanya area)  
+MEDICAL ISSUE ON BOARD  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Urgency,drifting,third_party,SEA BREEZE,4XGH4,785809361,Hadera power station area,heavy rain,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Silver Harbor. RECEIVED PAN PAN FROM SEA BREEZE. Vessel SEA BREEZE, call sign 4XGH4, MMSI 785809361, is drifting in Hadera power station area. Weather heavy rain. OVER"
+Urgency,engine_failure,third_party,MEDITERRANEAN DREAM,4XEF3,686989309,5 nm west of Haifa,rough seas,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY RELAY, PAN PAN RELAY RELAY, PAN PAN RELAY RELAY, THIS IS SILVER HORIZON. RECEIVED PAN PAN RELAY FROM MEDITERRANEAN DREAM. VESSEL MEDITERRANEAN DREAM CALL SIGN 4XEF3 MMSI 686989309 REPORTING ENGINE FAILURE AND REQUIRING ASSISTANCE. POSITION 5 nm west of Haifa. WEATHER ROUGH SEAS. OVER"
+Urgency,engine_failure,informal,,,570838810,Netanya coastline,,,False,NONE,,"Coast Guard, anyone copy? Our engine’s failed, we’re dead in the water off Netanya coastline, drifting and can’t get it restarted. MMSI 570838810. Need assistance fast, we’re not making way."
+Urgency,engine_failure,third_party,RED SEA RUNNER,4XAB1,542648079,Eilat Marina,strong wind,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is SAR observer Ocean Watch. RECEIVED PAN PAN RELAY FROM RED SEA RUNNER, call sign 4XAB1, MMSI 542648079. RED SEA RUNNER reports engine failure at Eilat Marina. Weather strong wind. OVER"
+Urgency,engine_failure,formal,BLUE HORIZON,4XAB1,254337019,32°19.0'N 034°51.0'E (Netanya area),heavy rain,4 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XAB1 MMSI 254337019  
+POSITION 32°19.0'N 034°51.0'E (Netanya area)  
+ENGINE FAILURE, VESSEL DISABLED AND UNABLE TO MAKE WAY, IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Urgency,medical_issue,formal,GALILEE STAR,4XJK5,535775088,29°33.0'N 034°57.0'E (Eilat area),strong wind,2 PERSONS ON BOARD,True,PAN PAN,PAN PAN,"PAN PAN, PAN PAN, PAN PAN  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XJK5 MMSI 535775088  
+POSITION 29°33.0'N 034°57.0'E (EILAT AREA)  
+MEDICAL ISSUE ON BOARD  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Urgency,engine_failure,informal,,,431009561,Palmahim Beach,,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. We’ve got engine failure and we’re dead in the water at Palmahim Beach. MMSI 431009561. Need assistance, we can’t get the engine started and we’re drifting."
+Urgency,medical_issue,informal,BLUE HORIZON,,,,heavy rain,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. Blue Horizon—urgent medical issue on board, we need help now. Heavy rain here and it’s getting hard to manage, requesting medical assistance and advice."
+Urgency,medical_issue,informal,,,,Eilat Marina,,,True,PAN PAN,PAN PAN,"Pan pan, pan pan, pan pan. We need urgent medical help at Eilat Marina—medical issue onboard, person is not doing well, need ambulance/doctor now. Please respond."
+Urgency,drifting,third_party,COASTAL SPIRIT,4XJK5,327572362,Ashdod Port,strong wind,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Silver Horizon. RECEIVED PAN PAN FROM COASTAL SPIRIT, call sign 4XJK5, MMSI 327572362. COASTAL SPIRIT is drifting at Ashdod Port. Weather reported strong wind. OVER"
+Urgency,engine_failure,informal,,,,5 nm west of Haifa,,,False,NONE,,"Hello, hello, any station near 5 nm west of Haifa—our engine’s failed, we’ve got no propulsion and we’re drifting. Need assistance or a tow, please respond."
+Urgency,medical_issue,informal,MEDITERRANEAN DREAM,4XJK5,,,,,False,NONE,,"Mediterranean Dream, call sign 4XJK5… we’ve got a medical emergency on board, person is in bad shape and getting worse, we need urgent medical advice and evacuation assistance as soon as possible, please respond."
+Urgency,medical_issue,third_party,GALILEE STAR,4XJK5,747301347,Eilat Marina,fog,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is SEA BREEZE. RECEIVED PAN PAN RELAY FROM GALILEE STAR, call sign 4XJK5, MMSI 747301347. Reported medical issue on board. Position: Eilat Marina. Weather: fog. OVER."
+Urgency,drifting,informal,COASTAL SPIRIT,,228612164,Eilat Marina,,5 PERSONS ON BOARD,False,NONE,,"Coastal Spirit, MMSI 228612164 — we’re drifting at Eilat Marina, no control, getting pushed around and can’t hold position. 5 persons on board. Need assistance now before we hit something."
+Urgency,engine_failure,third_party,RED SEA RUNNER,4XCD2,255142186,Eilat Marina,fog,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. This is Sea Watcher. RECEIVED PAN PAN RELAY FROM RED SEA RUNNER, call sign 4XCD2, MMSI 255142186. Reporting engine failure at Eilat Marina. Weather is fog. OVER"
+Urgency,engine_failure,third_party,RED SEA RUNNER,4XGH4,358672959,10 nm offshore of Herzliya Marina,choppy waves,POB UNKNOWN,True,PAN PAN,PAN PAN RELAY,"PAN PAN RELAY, PAN PAN RELAY, PAN PAN RELAY. THIS IS COASTAL WATCHER. RECEIVED PAN PAN FROM RED SEA RUNNER, CALL SIGN 4XGH4, MMSI 358672959. RED SEA RUNNER REPORTS ENGINE FAILURE AND IS DISABLED AT 10 nm offshore of Herzliya Marina. WEATHER CHOPPY WAVES. OVER."
+Distress,person_overboard,third_party,SEA BREEZE,4XCD2,220333847,Palmahim Beach,poor visibility,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY RELAY, MAYDAY RELAY RELAY, MAYDAY RELAY RELAY. RECEIVED MAYDAY RELAY FROM SEA BREEZE, call sign 4XCD2, MMSI 220333847. Reported PERSON OVERBOARD at Palmahim Beach. Weather reported poor visibility. OVER."
+Distress,fire_onboard,third_party,BLUE HORIZON,4XGH4,738824588,Eilat Marina,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM BLUE HORIZON, CALL SIGN 4XGH4, MMSI 738824588. REPORTING FIRE ONBOARD BLUE HORIZON AT Eilat Marina. WEATHER FOG. OVER"
+Distress,fire_onboard,third_party,BLUE HORIZON,4XJK5,422631460,Palmahim Beach,fog,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM BLUE HORIZON, CALL SIGN 4XJK5, MMSI 422631460. REPORTING FIRE ON BOARD. POSITION Palmahim Beach. WEATHER FOG. OVER"
+Distress,fire_onboard,informal,COASTAL SPIRIT,,483856728,,,,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! Coastal Spirit, MMSI 483856728 — we’ve got a fire onboard, smoke spreading fast, we can’t get it under control, need immediate assistance!"
+Distress,fire_onboard,formal,GALILEE STAR,4XJK5,520511037,32°28.0'N 034°52.0'E (Hadera area),strong wind,3 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XJK5 MMSI 520511037  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+FIRE ON BOARD, STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Distress,fire_onboard,formal,COASTAL SPIRIT,4XLM6,725063062,31°55.0'N 034°41.0'E (Palmahim area),heavy rain,4 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XLM6 MMSI 725063062  
+POSITION 31°55.0'N 034°41.0'E (PALMAHIM AREA)  
+FIRE ON BOARD  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,third_party,GALILEE STAR,4XEF3,330861323,Netanya coastline,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM GALILEE STAR. PERSON OVERBOARD REPORTED. POSITION Netanya coastline. WEATHER fog. OVER"
+Distress,person_overboard,formal,GALILEE STAR,4XAB1,508840720,31°55.0'N 034°41.0'E (Palmahim area),choppy waves,1 PERSON ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XAB1 MMSI 508840720  
+POSITION 31°55.0'N 034°41.0'E (PALMAHIM AREA)  
+PERSON OVERBOARD IN CHOPPY WAVES  
+REQUIRE IMMEDIATE ASSISTANCE  
+1 PERSON ON BOARD  
+OVER."
+Distress,fire_onboard,third_party,GALILEE STAR,4XLM6,714407444,10 nm offshore of Herzliya Marina,strong wind,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM GALILEE STAR. Vessel GALILEE STAR, call sign 4XLM6, MMSI 714407444, reporting fire onboard. Position: 10 nm offshore of Herzliya Marina. Weather: strong wind. OVER"
+Distress,taking_on_water,third_party,COASTAL SPIRIT,4XEF3,347395716,10 nm offshore of Herzliya Marina,rough seas,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM COASTAL SPIRIT, call sign 4XEF3, MMSI 347395716. COASTAL SPIRIT IS TAKING ON WATER. POSITION 10 nm offshore of Herzliya Marina. WEATHER ROUGH SEAS. OVER"
+Distress,person_overboard,third_party,BLUE HORIZON,4XLM6,450006353,Ashdod Port,rough seas,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM BLUE HORIZON, CALL SIGN 4XLM6, MMSI 450006353. REPORTING PERSON OVERBOARD FROM BLUE HORIZON AT Ashdod Port. WEATHER ROUGH SEAS. OVER"
+Distress,person_overboard,informal,,4XGH4,,10 nm offshore of Herzliya Marina,poor visibility,,True,MAYDAY,MAYDAY,"Mayday, mayday! Person overboard! Call sign 4XGH4 — we’ve got someone in the water at 10 nm offshore of Herzliya Marina. Poor visibility, we’ve lost sight of them, we’re turning back and searching now, need immediate assistance!"
+Distress,taking_on_water,third_party,SEA BREEZE,4XAB1,449344539,5 nm west of Haifa,fog,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. THIS IS COAST RADIO OPERATOR JAMESON. RECEIVED MAYDAY RELAY FROM SEA BREEZE, CALL SIGN 4XAB1, MMSI 449344539. SEA BREEZE IS TAKING ON WATER. POSITION 5 nm west of Haifa. WEATHER FOG. OVER"
+Distress,taking_on_water,formal,SEA BREEZE,4XGH4,731914410,32°28.0'N 034°52.0'E (Hadera area),strong wind,6 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XGH4 MMSI 731914410  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+TAKING ON WATER IN STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+6 PERSONS ON BOARD  
+OVER."
+Distress,fire_onboard,formal,GALILEE STAR,4XJK5,315213239,29°33.0'N 034°57.0'E (Eilat area),heavy rain,3 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XJK5 MMSI 315213239  
+POSITION 29°33.0'N 034°57.0'E (EILAT AREA)  
+FIRE ON BOARD  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,third_party,RED SEA RUNNER,4XGH4,344096091,Eilat Marina,fog,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. THIS IS SILVER HARBOR STATION. RECEIVED MAYDAY RELAY FROM RED SEA RUNNER, CALL SIGN 4XGH4, MMSI 344096091. REPORTING PERSON OVERBOARD. POSITION Eilat Marina. WEATHER FOG. OVER"
+Distress,taking_on_water,formal,GALILEE STAR,4XCD2,692755658,32°04.0'N 034°46.0'E (Tel Aviv area),choppy waves,3 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XCD2 MMSI 692755658  
+POSITION 32°04.0'N 034°46.0'E (TEL AVIV AREA)  
+TAKING ON WATER IN CHOPPY WAVES  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,third_party,GALILEE STAR,4XEF3,407405357,Netanya coastline,strong wind,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM GALILEE STAR, CALL SIGN 4XEF3, MMSI 407405357. REPORTING PERSON OVERBOARD FROM GALILEE STAR. POSITION Netanya coastline. WEATHER STRONG WIND. OVER"
+Distress,person_overboard,formal,MEDITERRANEAN DREAM,4XLM6,302418976,29°33.0'N 034°57.0'E (Eilat area),strong wind,2 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS MEDITERRANEAN DREAM, MEDITERRANEAN DREAM, MEDITERRANEAN DREAM  
+CALL SIGN 4XLM6 MMSI 302418976  
+POSITION 29°33.0'N 034°57.0'E (EILAT AREA)  
+PERSON OVERBOARD IN STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,formal,SEA BREEZE,4XEF3,611859868,32°28.0'N 034°52.0'E (Hadera area),strong wind,4 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XEF3 MMSI 611859868  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+PERSON OVERBOARD IN STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Distress,taking_on_water,informal,,,699714064,Hadera power station area,,,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! We’re taking on water fast in the Hadera power station area. MMSI 699714064. Pumps can’t keep up, we need immediate assistance!"
+Distress,person_overboard,third_party,COASTAL SPIRIT,4XEF3,326074193,Hadera power station area,choppy waves,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED FROM COASTAL SPIRIT, CALL SIGN 4XEF3, MMSI 326074193. PERSON OVERBOARD REPORTED. POSITION: Hadera power station area. WEATHER: choppy waves. OVER"
+Distress,person_overboard,formal,BLUE HORIZON,4XGH4,364481748,31°55.0'N 034°41.0'E (Palmahim area),poor visibility,6 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XGH4 MMSI 364481748  
+POSITION 31°55.0'N 034°41.0'E (PALMAHIM AREA)  
+PERSON OVERBOARD, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+6 PERSONS ON BOARD  
+OVER."
+Distress,taking_on_water,third_party,RED SEA RUNNER,4XGH4,777155220,10 nm offshore of Herzliya Marina,choppy waves,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED DISTRESS CALL FROM RED SEA RUNNER, CALL SIGN 4XGH4, MMSI 777155220. RED SEA RUNNER IS TAKING ON WATER. POSITION REPORTED AS 10 nm offshore of Herzliya Marina. WEATHER CHOPPY WAVES. OVER"
+Distress,taking_on_water,third_party,SEA BREEZE,4XJK5,679691987,Palmahim Beach,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM SEA BREEZE, CALL SIGN 4XJK5, MMSI 679691987. SEA BREEZE IS TAKING ON WATER. POSITION: Palmahim Beach. WEATHER: fog. OVER"
+Distress,taking_on_water,formal,SEA BREEZE,4XJK5,742762599,32°04.0'N 034°46.0'E (Tel Aviv area),strong wind,5 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XJK5 MMSI 742762599  
+POSITION 32°04.0'N 034°46.0'E (TEL AVIV AREA)  
+TAKING ON WATER IN STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Distress,fire_onboard,informal,MEDITERRANEAN DREAM,,259738492,5 nm west of Tel Aviv,,4 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! MEDITERRANEAN DREAM, mmsi 259738492 — we’ve got a fire onboard, smoke spreading, we can’t get it under control! Position 5 nm west of Tel Aviv. 4 PERSONS ON BOARD. Need immediate assistance, fire onboard!"
+Distress,fire_onboard,third_party,SEA BREEZE,4XJK5,696474925,Hadera power station area,choppy waves,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. THIS IS SILVER HARBOR. RECEIVED MAYDAY RELAY FROM SEA BREEZE, CALL SIGN 4XJK5, MMSI 696474925. REPORTING FIRE ONBOARD. POSITION: Hadera power station area. WEATHER: choppy waves. OVER."
+Distress,taking_on_water,informal,,,,Eilat Marina,rough seas,1 PERSON ON BOARD,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! We’re at Eilat Marina, taking on water fast—rough seas are slamming us, I can’t keep up with it. 1 PERSON ON BOARD. Need immediate assistance before we go down!"
+Distress,person_overboard,formal,BLUE HORIZON,4XLM6,651360199,29°33.0'N 034°57.0'E (Eilat area),heavy rain,4 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XLM6 MMSI 651360199  
+POSITION 29°33.0'N 034°57.0'E (EILAT AREA)  
+PERSON OVERBOARD IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Distress,taking_on_water,informal,RED SEA RUNNER,4XGH4,,,fog,,False,NONE,,"Red Sea Runner, call sign 4XGH4… we’re taking on water, it’s coming in fast and we can’t keep up. Visibility’s terrible in this fog. Need immediate assistance, anyone nearby respond."
+Distress,fire_onboard,formal,SEA BREEZE,4XAB1,520364823,32°19.0'N 034°51.0'E (Netanya area),poor visibility,6 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XAB1 MMSI 520364823  
+POSITION 32°19.0'N 034°51.0'E (NETANYA AREA)  
+FIRE ON BOARD, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+6 PERSONS ON BOARD  
+OVER."
+Distress,fire_onboard,informal,,4XAB1,234593072,Netanya coastline,,6 PERSONS ON BOARD,False,NONE,,"Coast Guard, anyone copy? We’ve got a fire onboard, it’s spreading fast, we can’t get it under control. We’re at Netanya coastline. Call sign 4XAB1, MMSI 234593072. 6 PERSONS ON BOARD. Need immediate assistance, we might have to abandon."
+Distress,person_overboard,formal,BLUE HORIZON,4XCD2,272253060,32°49.0'N 034°59.0'E (Haifa area),rough seas,5 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XCD2 MMSI 272253060  
+POSITION 32°49.0'N 034°59.0'E (Haifa area)  
+PERSON OVERBOARD IN ROUGH SEAS  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,third_party,COASTAL SPIRIT,4XLM6,252265802,5 nm west of Haifa,strong wind,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY RELAY, MAYDAY RELAY RELAY, MAYDAY RELAY RELAY. This is vessel SILVER HORIZON. RECEIVED MAYDAY RELAY FROM COASTAL SPIRIT, call sign 4XLM6, MMSI 252265802. Reported PERSON OVERBOARD. Position 5 nm west of Haifa. Weather strong wind. OVER"
+Distress,taking_on_water,third_party,BLUE HORIZON,4XAB1,350469429,Hadera power station area,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED DISTRESS CALL FROM BLUE HORIZON, CALL SIGN 4XAB1, MMSI 350469429. BLUE HORIZON IS TAKING ON WATER. POSITION: Hadera power station area. WEATHER: fog. OVER"
+Distress,taking_on_water,third_party,RED SEA RUNNER,4XEF3,544311548,Hadera power station area,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM RED SEA RUNNER, CALL SIGN 4XEF3, MMSI 544311548. RED SEA RUNNER IS TAKING ON WATER. POSITION: Hadera power station area. WEATHER: strong wind. OVER"
+Distress,fire_onboard,third_party,BLUE HORIZON,4XGH4,522660441,5 nm west of Haifa,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM BLUE HORIZON, CALL SIGN 4XGH4, MMSI 522660441. REPORTING FIRE ON BOARD. POSITION 5 nm west of Haifa. WEATHER HEAVY RAIN. OVER"
+Distress,taking_on_water,third_party,BLUE HORIZON,4XLM6,658703133,Eilat Marina,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM BLUE HORIZON, CALL SIGN 4XLM6, MMSI 658703133. BLUE HORIZON IS TAKING ON WATER. POSITION: Eilat Marina. WEATHER: fog. OVER"
+Distress,person_overboard,third_party,COASTAL SPIRIT,4XGH4,763137920,Netanya coastline,heavy rain,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY RELAY, MAYDAY RELAY RELAY, MAYDAY RELAY RELAY. RECEIVED MAYDAY RELAY FROM COASTAL SPIRIT, CALL SIGN 4XGH4, MMSI 763137920. REPORTING PERSON OVERBOARD FROM COASTAL SPIRIT. POSITION Netanya coastline. WEATHER heavy rain. OVER"
+Distress,fire_onboard,informal,,4XGH4,,5 nm west of Haifa,,,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! Fire onboard, we’re at 5 nm west of Haifa. Call sign 4XGH4. Smoke and flames spreading, we need immediate assistance, requesting firefighting help and evacuation if possible!"
+Distress,taking_on_water,informal,,4XEF3,299282456,10 nm offshore of Herzliya Marina,,,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! We’re taking on water, 10 nm offshore of Herzliya Marina. Call sign 4XEF3, MMSI 299282456. Water’s coming in fast, we need immediate assistance!"
+Distress,fire_onboard,third_party,RED SEA RUNNER,4XJK5,242463863,10 nm offshore of Herzliya Marina,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM RED SEA RUNNER, CALL SIGN 4XJK5, MMSI 242463863. REPORTING FIRE ON BOARD. POSITION 10 nm offshore of Herzliya Marina. WEATHER ROUGH SEAS. THIS IS MOTOR VESSEL SILVER DAWN RELAYING. OVER"
+Distress,taking_on_water,third_party,BLUE HORIZON,4XGH4,424292944,Hadera power station area,heavy rain,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM BLUE HORIZON, CALL SIGN 4XGH4, MMSI 424292944. BLUE HORIZON IS TAKING ON WATER. POSITION: Hadera power station area. WEATHER: heavy rain. OVER"
+Distress,person_overboard,formal,COASTAL SPIRIT,4XAB1,714237373,32°10.0'N 034°48.0'E (Herzliya area),strong wind,6 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XAB1 MMSI 714237373  
+POSITION 32°10.0'N 034°48.0'E (Herzliya area)  
+PERSON OVERBOARD IN STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+6 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,formal,RED SEA RUNNER,4XEF3,503932500,31°55.0'N 034°41.0'E (Palmahim area),poor visibility,4 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS RED SEA RUNNER, RED SEA RUNNER, RED SEA RUNNER  
+CALL SIGN 4XEF3 MMSI 503932500  
+POSITION 31°55.0'N 034°41.0'E (PALMAHIM AREA)  
+PERSON OVERBOARD IN POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+4 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,informal,,4XEF3,418106480,Palmahim Beach,heavy rain,,True,MAYDAY,MAYDAY,"Mayday, mayday! Person overboard at Palmahim Beach—someone just went in, we lost sight in this heavy rain! Call sign 4XEF3, MMSI 418106480—need immediate assistance, we’re trying to keep position and search now!"
+Distress,person_overboard,formal,COASTAL SPIRIT,4XCD2,217415986,32°19.0'N 034°51.0'E (Netanya area),heavy rain,5 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XCD2 MMSI 217415986  
+POSITION 32°19.0'N 034°51.0'E (NETANYA AREA)  
+PERSON OVERBOARD IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,formal,BLUE HORIZON,4XEF3,446980616,32°10.0'N 034°48.0'E (Herzliya area),poor visibility,5 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XEF3 MMSI 446980616  
+POSITION 32°10.0'N 034°48.0'E (HERZLIYA AREA)  
+PERSON OVERBOARD, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+5 PERSONS ON BOARD  
+OVER."
+Distress,fire_onboard,third_party,COASTAL SPIRIT,4XLM6,562456889,Eilat Marina,heavy rain,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM COASTAL SPIRIT, CALL SIGN 4XLM6, MMSI 562456889. REPORTING FIRE ON BOARD. POSITION Eilat Marina. WEATHER HEAVY RAIN. OVER"
+Distress,fire_onboard,informal,,,,5 nm west of Haifa,fog,,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! Fire onboard, we’ve got flames and smoke spreading, we can’t get it under control! We are at 5 nm west of Haifa. Visibility is bad, fog all around. Need immediate assistance, please!"
+Distress,taking_on_water,formal,COASTAL SPIRIT,4XAB1,206854580,32°10.0'N 034°48.0'E (Herzliya area),poor visibility,2 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS COASTAL SPIRIT, COASTAL SPIRIT, COASTAL SPIRIT  
+CALL SIGN 4XAB1 MMSI 206854580  
+POSITION 32°10.0'N 034°48.0'E (HERZLIYA AREA)  
+TAKING ON WATER, POOR VISIBILITY  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,third_party,BLUE HORIZON,4XAB1,434848459,Eilat Marina,fog,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. THIS IS SILVER CREST. RECEIVED MAYDAY RELAY FROM BLUE HORIZON, CALL SIGN 4XAB1, MMSI 434848459. REPORTING PERSON OVERBOARD. POSITION Eilat Marina. WEATHER FOG. OVER."
+Distress,taking_on_water,third_party,COASTAL SPIRIT,4XJK5,718836510,Eilat Marina,choppy waves,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM COASTAL SPIRIT, CALL SIGN 4XJK5, MMSI 718836510. COASTAL SPIRIT IS TAKING ON WATER AT Eilat Marina. WEATHER CHOPPY WAVES. OVER"
+Distress,fire_onboard,third_party,MEDITERRANEAN DREAM,4XAB1,217959560,Hadera power station area,fog,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY
+
+RECEIVED DISTRESS CALL FROM MEDITERRANEAN DREAM, CALL SIGN 4XAB1, MMSI 217959560. REPORTING FIRE ONBOARD. POSITION: Hadera power station area. WEATHER: fog. OVER"
+Distress,fire_onboard,formal,RED SEA RUNNER,4XLM6,662324458,31°48.0'N 034°38.0'E (Ashdod area),strong wind,1 PERSON ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS RED SEA RUNNER, RED SEA RUNNER, RED SEA RUNNER  
+CALL SIGN 4XLM6 MMSI 662324458  
+POSITION 31°48.0'N 034°38.0'E (Ashdod area)  
+FIRE ON BOARD, STRONG WIND  
+REQUIRE IMMEDIATE ASSISTANCE  
+1 PERSON ON BOARD  
+OVER."
+Distress,person_overboard,formal,BLUE HORIZON,4XCD2,765277813,32°28.0'N 034°52.0'E (Hadera area),heavy rain,3 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS BLUE HORIZON, BLUE HORIZON, BLUE HORIZON  
+CALL SIGN 4XCD2 MMSI 765277813  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+PERSON OVERBOARD IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+3 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,formal,GALILEE STAR,4XGH4,692845076,32°10.0'N 034°48.0'E (Herzliya area),fog,2 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XGH4 MMSI 692845076  
+POSITION 32°10.0'N 034°48.0'E (HERZLIYA AREA)  
+PERSON OVERBOARD IN FOG  
+REQUIRE IMMEDIATE ASSISTANCE  
+2 PERSONS ON BOARD  
+OVER."
+Distress,person_overboard,third_party,SEA BREEZE,4XLM6,234020981,Netanya coastline,rough seas,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM SEA BREEZE, call sign 4XLM6, MMSI 234020981. Reported person overboard from SEA BREEZE at Netanya coastline. Weather rough seas. OVER"
+Distress,taking_on_water,informal,,,302393989,5 nm west of Haifa,,,True,MAYDAY,MAYDAY,"Mayday mayday mayday! We’re taking on water, can’t keep up with it! MMSI 302393989, position 5 nm west of Haifa. Need immediate assistance, we’re in trouble!"
+Distress,fire_onboard,third_party,RED SEA RUNNER,4XGH4,491086098,Ashdod Port,rough seas,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED DISTRESS CALL FROM RED SEA RUNNER. Vessel RED SEA RUNNER, call sign 4XGH4, MMSI 491086098, reporting fire onboard at Ashdod Port. Weather rough seas. OVER"
+Distress,taking_on_water,third_party,RED SEA RUNNER,4XLM6,235328023,Palmahim Beach,strong wind,POB UNKNOWN,False,NONE,,"RELAY, RELAY, RELAY. RECEIVED  FROM RED SEA RUNNER. This is SEA WATCHER. RED SEA RUNNER, call sign 4XLM6, MMSI 235328023, is taking on water at Palmahim Beach. Weather is strong wind. OVER"
+Distress,taking_on_water,third_party,BLUE HORIZON,4XLM6,627667092,Hadera power station area,rough seas,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. THIS IS SILVER WAVE. RECEIVED MAYDAY RELAY FROM BLUE HORIZON, CALL SIGN 4XLM6, MMSI 627667092. BLUE HORIZON IS TAKING ON WATER. POSITION: Hadera power station area. WEATHER: rough seas. OVER"
+Distress,fire_onboard,third_party,MEDITERRANEAN DREAM,4XLM6,780424495,Netanya coastline,heavy rain,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. I am Silver Horizon relaying. RECEIVED MAYDAY RELAY FROM MEDITERRANEAN DREAM, call sign 4XLM6, MMSI 780424495. Reported fire onboard. Position: Netanya coastline. Weather: heavy rain. OVER"
+Distress,taking_on_water,third_party,COASTAL SPIRIT,4XAB1,737722224,Palmahim Beach,choppy waves,POB UNKNOWN,True,MAYDAY,MAYDAY RELAY,"MAYDAY RELAY, MAYDAY RELAY, MAYDAY RELAY. RECEIVED MAYDAY RELAY FROM COASTAL SPIRIT, call sign 4XAB1, MMSI 737722224. COASTAL SPIRIT is taking on water at Palmahim Beach. Weather reported as choppy waves. OVER"
+Distress,person_overboard,formal,SEA BREEZE,4XEF3,625956648,32°28.0'N 034°52.0'E (Hadera area),heavy rain,1 PERSON ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS SEA BREEZE, SEA BREEZE, SEA BREEZE  
+CALL SIGN 4XEF3 MMSI 625956648  
+POSITION 32°28.0'N 034°52.0'E (HADERA AREA)  
+PERSON OVERBOARD IN HEAVY RAIN  
+REQUIRE IMMEDIATE ASSISTANCE  
+1 PERSON ON BOARD  
+OVER."
+Distress,taking_on_water,informal,,,,Hadera power station area,,,False,NONE,,"We’re taking on water fast in the Hadera power station area, can anyone assist right now? Water’s coming in and we can’t keep up, need help urgently."
+Distress,fire_onboard,formal,GALILEE STAR,4XCD2,608021882,32°04.0'N 034°46.0'E (Tel Aviv area),choppy waves,6 PERSONS ON BOARD,True,MAYDAY,MAYDAY,"MAYDAY, MAYDAY, MAYDAY  
+THIS IS GALILEE STAR, GALILEE STAR, GALILEE STAR  
+CALL SIGN 4XCD2 MMSI 608021882  
+POSITION 32°04.0'N 034°46.0'E (TEL AVIV AREA)  
+FIRE ON BOARD  
+REQUIRE IMMEDIATE ASSISTANCE  
+6 PERSONS ON BOARD  
+OVER."
+Distress,taking_on_water,informal,,,,5 nm west of Tel Aviv,,,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! We’re taking on water, can’t keep up with it! We are 5 nm west of Tel Aviv. Need immediate assistance, we’re in trouble!"
+Distress,person_overboard,informal,,,,Palmahim Beach,,,True,MAYDAY,MAYDAY,"Mayday, mayday! Person overboard at Palmahim Beach! We’ve lost sight of them, need immediate assistance—anyone nearby please respond!"
+Distress,taking_on_water,informal,BLUE HORIZON,4XLM6,,Netanya coastline,,,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! BLUE HORIZON, call sign 4XLM6 — we’re taking on water fast off Netanya coastline, pumps can’t keep up, we’re losing buoyancy, need immediate assistance!"
+Distress,taking_on_water,informal,,,587754927,Hadera power station area,,,False,NONE,,"We’re taking on water, it’s coming in fast and we can’t keep up. We’re in Hadera power station area. MMSI 587754927. Need help urgently, pumps not holding."
+Distress,person_overboard,informal,,4XJK5,,Netanya coastline,,,True,MAYDAY,MAYDAY,"Mayday, mayday, mayday! Person overboard off the Netanya coastline! Call sign 4XJK5 — we’ve lost sight of them, need immediate assistance, any vessels nearby please respond!"
+Distress,person_overboard,informal,BLUE HORIZON,,714332794,,heavy rain,2 PERSONS ON BOARD,False,NONE,,"Blue Horizon, MMSI 714332794—person overboard! We’ve lost someone off the stern, can’t see them in this heavy rain. Two persons on board. Need immediate assistance, we’re searching right now!"
+Distress,fire_onboard,informal,MEDITERRANEAN DREAM,,,10 nm offshore of Herzliya Marina,heavy rain,1 PERSON ON BOARD,False,NONE,,"MEDITERRANEAN DREAM, we’ve got a fire onboard, smoke in the cabin, I’m alone—1 person on board. Position 10 nm offshore of Herzliya Marina. Heavy rain out here, I can’t get it under control, need help now!"
