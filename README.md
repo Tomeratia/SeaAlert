@@ -1,6 +1,6 @@
 # SeaAlert - Maritime Distress Call Classification & Information Extraction
 
-> **Classifying noisy ASR transcriptions of maritime distress calls and extracting actionable information for rescue coordination.**
+> **Classifying noisy ASR transcriptions of maritime calls and extracting actionable information for rescue coordination.**
 
 ## Table of Contents
 
