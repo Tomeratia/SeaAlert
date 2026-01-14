@@ -29,8 +29,8 @@ models/
 **/checkpoints/
 **/checkpoint-*/
 
-# Old versions
-stage2/
+# Old versions / Archive
+archive/
 
 # MacOS
 .DS_Store
