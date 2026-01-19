@@ -54,7 +54,7 @@ Here's a **real example from my dataset** — demonstrating how severe ASR error
 | **Original Message** | *"**MAYDAY, MAYDAY, MAYDAY!** This is the sailing yacht '**Wind Whisper**', uh, we're, um, having a steering failure—can't control the rudder. We're drifting, uh, southeast of, uh, **Cape Cod**, um, about **10 nautical miles off the shore**, I think. Weather's, uh, kinda rough, waves are, like, 3 meters, and it's, um, getting windy. We've got, uh, three people onboard. Need assistance, like, right now! Over."* |
 | **ASR Output (High Noise)** | *"**maybe, maybe, maybe**, this is the sailing yacht **with this boat out here**, I'm having a steering failure, can't control the rudder, we drifting, I've surfaced through, I **kick hard**, I'm about **10 knots, I come out as off as sure** I think, where those are, can't laugh, waves are like three meters, and it's, I'm getting in the, we've got a few people on board, need the systems right right now, over."* |
 | **Classification** | 🔴 **DISTRESS** |
-| **Extracted Information** | `Vessel: Wind Whisper` · `Location: Southeast of Cape Cod, 10nm offshore` · `POB: 3` · `Nature: Steering failure, drifting` |
+| **Extracted Information** | `Vessel: NONE` · `Location:NONE` · `POB: NONE` · `Nature: Steering failure, drifting` |
 
 **Critical ASR Errors Shown:**
 - `MAYDAY, MAYDAY, MAYDAY` → `maybe, maybe, maybe` 🔴 **(codeword completely lost!)**
