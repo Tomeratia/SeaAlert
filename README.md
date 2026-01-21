@@ -1,5 +1,5 @@
 # SeaAlert 
-## Maritime Distress Call Classification & Information Extraction
+## Maritime Radio Call Classification & Information Extraction
 
 > **Classifying noisy ASR transcriptions of maritime calls and extracting actionable information for rescue coordination.**
 
