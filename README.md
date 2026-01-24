@@ -22,12 +22,12 @@
 ##  Project Goal
 
 **SeaAlert** is an NLP system designed to:
-1. **Classify** maritime radio distress calls into 4 severity levels (Distress, Urgency, Safety, Routine)
+1. **Classify** maritime radio calls into 4 severity levels (Distress, Urgency, Safety, Routine)
 2. **Extract** actionable information (Location, Vessel Name, Persons on Board, Nature of Incident)
 
 ### The Real-World Challenge
 
-Maritime distress calls are made under extreme conditions:
+Maritime radio calls are made under extreme conditions:
 - **High Noise Environment** — Engine noise, storms, VHF static interference
 - **Human Stress** — Panic causes operators to omit keywords or speak informally
 - **Protocol Violations** — Not all distress calls follow GMDSS standards ("MAYDAY", "PAN PAN")
