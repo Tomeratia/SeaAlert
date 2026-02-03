@@ -1,7 +1,6 @@
 # SeaAlert 
-## Maritime Radio Call Classification & Information Extraction
+### Robust Classification and Information Extraction from Noisy Maritime Distress Communications Using Large Language Models
 
-> **Classifying noisy ASR transcriptions of maritime calls and extracting actionable information for rescue coordination.**
 
 ## Table of Contents
 
