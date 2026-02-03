@@ -326,6 +326,8 @@ End-to-end demonstration:
 
 ## Dataset
 
+> 📂 **[Download/View Full Dataset (Audio & Metadata) on Google Drive](https://drive.google.com/drive/folders/1X6kbNvaAN7yWJGcH8SU4fDIwbkNcOgdR?usp=sharing)**
+
 ### Schema (02seaalert.csv)
 
 | Column | Type | Description |
