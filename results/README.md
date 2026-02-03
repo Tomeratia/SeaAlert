@@ -1,10 +1,10 @@
-# 📊 Experiment Results & Visualizations
+# Experiment Results & Visualizations
 
 This directory contains the outputs of all experiments, evaluations, and data analyses performed in the SeaAlert project. The files are organized into two subdirectories: `csv/` for raw data tables and `visuals/` for plots and qualitative reports.
 
 ---
 
-## 📂 csv/ (Data Tables)
+## csv/ (Data Tables)
 
 | File | Description | Source Notebook |
 | :--- | :--- | :--- |
@@ -18,9 +18,9 @@ This directory contains the outputs of all experiments, evaluations, and data an
 
 ---
 
-## 📂 visuals/ (Plots & Reports)
+## visuals/ (Plots & Reports)
 
-### 📈 Exploratory Data Analysis (EDA)
+### Exploratory Data Analysis (EDA)
 | File | Description |
 | :--- | :--- |
 | `eda_label_distribution.png` | Bar chart showing the balanced distribution of the 4 severity labels (Distress, Urgency, Safety, Routine). |
@@ -32,7 +32,7 @@ This directory contains the outputs of all experiments, evaluations, and data an
 | `eda_audio_duration.png` | Histogram of the audio file durations. |
 | `eda_wer_analysis.png` | Plot showing how Word Error Rate (WER) increases with noise levels (SNR). |
 
-### 🏆 Model Performance
+### Model Performance
 | File | Description |
 | :--- | :--- |
 | `model_comparison_bars.png` | **Key Chart:** Comparison of F1 scores between Baseline (BoW) and Transformer (RoBERTa) models. |
@@ -41,7 +41,7 @@ This directory contains the outputs of all experiments, evaluations, and data an
 | `cm_tf_setting_c.png` | Confusion Matrix for the RoBERTa transformer model. |
 | `summary_bars.png` | Summary visualization of the main 3 experiments (Masking, Traps, ASR). |
 
-### 📝 Qualitative Reports
+### Qualitative Reports
 | File | Description |
 | :--- | :--- |
 | `data_quality_report.txt` | Text summary of dataset statistics and quality checks. |
