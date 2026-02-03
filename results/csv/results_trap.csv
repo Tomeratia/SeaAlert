@@ -1,3 +1,0 @@
-model,type,setting,acc,macro_f1,with_cw_acc,no_cw_acc,gap
-logistic_regression,baseline,trap_set,0.2667,0.1392,,,
-roberta-base,transformer,trap_set,0.3333,0.2359,,,
