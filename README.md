@@ -222,12 +222,27 @@ SeaAlert/
 │   ├── split_indices.csv               # Train/val/test splits
 │   └── *.png                           # Visualizations
 │
+├── presentation/                       # Project presentations
+│   ├── Proposal.pdf
+│   ├── Interim.pdf
+│   └── Final.pdf
+│
 ├── archive/                            # Previous project versions
 │
 ├── pipeline_diagram.png                # Pipeline visualization
 ├── .gitignore                          # Git ignore rules
 └── README.md                           # This file
 ```
+
+---
+
+## Presentations
+
+- [**Proposal**](presentation/Proposal.pdf) – Initial project proposal
+- [**Interim**](presentation/Interim.pdf) – Mid-project progress update
+- [**Final**](presentation/Final.pdf) – Final project presentation
+
+*(PPTX files are also included in the `presentation/` folder)*
 
 ---
 
