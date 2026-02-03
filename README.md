@@ -217,10 +217,9 @@ SeaAlert/
 │       └── *_index.csv
 │
 ├── results/                            # Results & visualizations
-│   ├── all_model_results.csv           # Consolidated model results
-│   ├── wer_report.csv                  # Word Error Rate analysis
-│   ├── split_indices.csv               # Train/val/test splits
-│   └── *.png                           # Visualizations
+├── results/                            # Results & visualizations
+│   ├── csv/                            # CSV data (metrics, splits, error reports)
+│   └── visuals/                        # Figures, plots, and text reports
 │
 ├── presentation/                       # Project presentations
 │   ├── Proposal.pdf
