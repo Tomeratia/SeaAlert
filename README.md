@@ -42,7 +42,7 @@ We tackle this challenge using **two augmentation techniques**:
 
 This creates realistic training data that mimics real-world maritime communication failures.
 
-![SeaAlert Pipeline](pipeline_diagram.png)
+![SeaAlert Pipeline](assets/pipeline_diagram.png)
 
 ---
 
@@ -227,7 +227,9 @@ SeaAlert/
 │
 ├── archive/                            # Previous project versions
 │
-├── pipeline_diagram.png                # Pipeline visualization
+├── assets/                             # Project images and diagrams
+│   └── pipeline_diagram.png
+│
 ├── .gitignore                          # Git ignore rules
 └── README.md                           # This file
 ```
