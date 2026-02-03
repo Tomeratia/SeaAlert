@@ -1,4 +1,4 @@
-# 📂 Dataset Access
+#  Dataset Access
 
 The full dataset, including raw audio files (WAV), metadata, and processed CSVs, is hosted externally due to size constraints.
 
