@@ -217,7 +217,6 @@ SeaAlert/
 │       └── *_index.csv
 │
 ├── results/                            # Results & visualizations
-├── results/                            # Results & visualizations
 │   ├── csv/                            # CSV data (metrics, splits, error reports)
 │   └── visuals/                        # Figures, plots, and text reports
 │
