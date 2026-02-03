@@ -9,9 +9,7 @@ This directory contains the outputs of all experiments, evaluations, and data an
 | File | Description | Source Notebook |
 | :--- | :--- | :--- |
 | `all_model_results.csv` | **Main Results Table:** Consolidated performance metrics (Accuracy, Macro F1) for all experiments: 1) Clean vs ASR, 2) Codeword Masking, and 3) Adversarial Traps. | `04_train_and_evaluate.ipynb` |
-| `wer_report.csv` | **ASR Error Analysis:** Breakdown of Word Error Rate (WER) across different noise levels (Low/Med/High) and scenarios. Used to analyze speech-to-text quality. | `00_eda_audio_asr.ipynb` / `03_noise_and_asr.ipynb` |
-| `split_indices.csv` | **Data Splits:** Stores the exact indices used for Train (70%), Validation (15%), and Test (15%) sets to ensure reproducibility across all experiments. | `01_generate_synthetic_dataset.ipynb` |
-| `trap_set.csv` | **Adversarial Dataset:** The specific set of "trap" examples created to fool keyword-based classifiers. | `04_train_and_evaluate.ipynb` |
+
 
 ---
 
@@ -38,9 +36,3 @@ This directory contains the outputs of all experiments, evaluations, and data an
 | `cm_tf_setting_c.png` | Confusion Matrix for the RoBERTa transformer model. |
 | `summary_bars.png` | Summary visualization of the main 3 experiments (Masking, Traps, ASR). |
 
-### Qualitative Reports
-| File | Description |
-| :--- | :--- |
-| `data_quality_report.txt` | Text summary of dataset statistics and quality checks. |
-| `error_analysis.txt` | Detailed analysis of specific misclassification errors made by the models. |
-| `demo_asr_roberta_report.json` | Sample JSON output from the inference demo, showing classification and extracted entities (Vessel, Location, etc.). |
