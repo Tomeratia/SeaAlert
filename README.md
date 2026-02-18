@@ -1,5 +1,5 @@
 # SeaAlert 
-### Robust Classification and Information Extraction from Noisy Maritime Distress Communications Using Large Language Models
+###Robust Severity Assessment and Information Extraction from Noisy Maritime Distress Communications Using Large Language Models
 
 
 ## Table of Contents
