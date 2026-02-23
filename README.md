@@ -51,18 +51,19 @@ Here's a **real example from my dataset** — demonstrating how severe ASR error
 
 | Stage | Content |
 |-------|---------|
-| **Original Message** | *"**MAYDAY, MAYDAY, MAYDAY!** This is the sailing yacht '**Wind Whisper**', uh, we're, um, having a steering failure—can't control the rudder. We're drifting, uh, southeast of, uh, **Cape Cod**, um, about **10 nautical miles off the shore**, I think. Weather's, uh, kinda rough, waves are, like, 3 meters, and it's, um, getting windy. We've got, uh, three people onboard. Need assistance, like, right now! Over."* |
-| **ASR Output (High Noise)** | *"**maybe, maybe, maybe**, this is the sailing yacht **with this boat out here**, I'm having a steering failure, can't control the rudder, we drifting, I've surfaced through, I **kick hard**, I'm about **10 knots, I come out as off as sure** I think, where those are, can't laugh, waves are like three meters, and it's, I'm getting in the, we've got a few people on board, need the systems right right now, over."* |
+| **Original Message** | *"**MAYDAY, MAYDAY, MAYDAY.** This is the fishing vessel '**Ocean Explorer**', call sign **WXYZ123**, MMSI **123456789**. We are adrift, approximately 15 nautical miles east of Cape Point, at position 34 degrees 12 minutes South, 18 degrees 29 minutes East. The vessel's engine has failed, and we are currently taking on water. Weather conditions are worsening with 4-meter swells and visibility reduced to **2 nautical miles**. There are 6 persons on board. We require immediate assistance for **towing**. Repeat, we are requesting a tow. Over."* |
+| **ASR Output (High Noise)** | *"**maybe, maybe, maybe**. This is the Fishing Vessel **Oceanate Spoiler**. **Paul Signed to be its Ryzen 123 MMSI 120 3 million 456000 7809**. The Area Drift approximately 15 nautical miles east of Cape Point, a position 34 degrees 12 minutes south, 18 degrees 29 minutes east. The Vessel's engine has failed and we are currently taking on water. Whether conditions are **a worse name before need as well as invisibility we choose to T-Nautical miles**. There are six persons on board. You require immediate assistance for **training**. You please, **you are wrecked**."* |
 | **Classification** | 🔴 **DISTRESS** |
-| **Extracted Information** | `Vessel: NONE` · `Location:NONE` · `POB: NONE` · `Nature: Steering failure, drifting` |
+| **Extracted Information** | `Vessel: Oceanate Spoiler` · `Location: NONE` · `POB: NONE` · `Nature: taking on water` |
 
 **Critical ASR Errors Shown:**
 - `MAYDAY, MAYDAY, MAYDAY` → `maybe, maybe, maybe` 🔴 **(codeword completely lost!)**
-- `Wind Whisper` → `with this boat out here` (vessel name destroyed)
-- `Cape Cod` → `kick hard` (location corrupted)
-- `nautical miles off the shore` → `knots, I come out as off as sure` (nonsensical)
+- `Ocean Explorer` → `Oceanate Spoiler` (vessel name corrupted)
+- `call sign WXYZ123, MMSI 123456789` → `Paul Signed to be its Ryzen 123...` (identifiers destroyed)
+- `visibility reduced to 2 nautical miles` → `invisibility we choose to T-Nautical miles` (nonsensical)
+- `requesting a tow. Over.` → `training. You please, you are wrecked.` (meaning completely altered)
 
-Despite these **catastrophic ASR errors** — where the critical MAYDAY codeword became "maybe" — my Transformer model correctly classifies the message as DISTRESS based on contextual understanding of phrases like "steering failure", "can't control", "drifting", and "need assistance".
+Despite these **catastrophic ASR errors** — where the critical MAYDAY codeword became "maybe" and the message ended with "you are wrecked" — my Transformer model correctly classifies the message as DISTRESS based on contextual understanding of phrases like "engine has failed", "taking on water", and "require immediate assistance".
 
 ---
 
