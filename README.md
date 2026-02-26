@@ -36,7 +36,7 @@ Maritime radio calls are made under extreme conditions:
 ### My Approach: Dual Augmentation
 
 We tackle this challenge using **two augmentation techniques**:
-1. **LLM-based Text Generation** — GPT-4 generates diverse maritime messages (formal, informal, protocol violations)
+1. **LLM-based Text Generation** — GPT-4o-mini generates diverse maritime messages (formal, informal, protocol violations)
 2. **ASR-based Augmentation** — Text → TTS → Noisy Audio → Whisper ASR → Corrupted Text
 
 This creates realistic training data that mimics real-world maritime communication failures.
@@ -148,7 +148,7 @@ My end-to-end pipeline simulates real maritime communication:
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐              │
-│  │   GPT-4      │    │  Coqui TTS   │    │ Noise Layer  │              │
+│  │   GPT-4o-mini│    │  Coqui TTS   │    │ Noise Layer  │              │
 │  │  Generation  │───▶│  Synthesis   │───▶│  (VHF Radio) │              │
 │  │ 1,872 msgs   │    │   16kHz      │    │ 6/12/18 dB   │              │
 │  └──────────────┘    └──────────────┘    └──────────────┘              │
@@ -185,7 +185,7 @@ My end-to-end pipeline simulates real maritime communication:
 
 | Stage | Description | Output |
 |-------|-------------|--------|
-| **1. Data Generation** | GPT-4 synthetic maritime messages | 1,872 balanced samples |
+| **1. Data Generation** | GPT-4o-mini synthetic maritime messages | 1,872 balanced samples |
 | **2. Text-to-Speech** | Coqui TTS audio synthesis | WAV files (16kHz) |
 | **3. Noise Simulation** | VHF radio noise at 3 SNR levels | Noisy audio files |
 | **4. ASR Transcription** | Faster-Whisper speech-to-text | Corrupted text transcripts |
@@ -201,7 +201,7 @@ SeaAlert/
 ├── notebooks/                          # Jupyter notebooks (run in order)
 │   ├── 00_eda_dataset.ipynb            # EDA for synthetic dataset
 │   ├── 00_eda_audio_asr.ipynb          # EDA for audio & ASR quality
-│   ├── 01_generate_synthetic_dataset.ipynb   # GPT-4 data generation
+│   ├── 01_generate_synthetic_dataset.ipynb   # GPT-4o-mini data generation
 │   ├── 02_text_to_speech.ipynb         # Coqui TTS synthesis
 │   ├── 03_noise_and_asr.ipynb          # Noise injection + Whisper ASR
 │   ├── 04_train_and_evaluate.ipynb     # Model training & experiments
@@ -267,7 +267,7 @@ SeaAlert/
 ### 2. Data Generation & Audio Pipeline
 
 #### 01_generate_synthetic_dataset.ipynb
-Generates 1,872 synthetic maritime messages using GPT-4.
+Generates 1,872 synthetic maritime messages using GPT-4o-mini.
 
 **Features:**
 - 4 balanced classes: 468 samples each
@@ -462,4 +462,4 @@ Educational project for NLP course.
 - [Coqui TTS](https://github.com/coqui-ai/TTS) - Text-to-Speech synthesis
 - [Faster Whisper](https://github.com/guillaumekln/faster-whisper) - ASR transcription
 - [HuggingFace Transformers](https://huggingface.co/) - RoBERTa model
-- OpenAI GPT-4 - Synthetic data generation
+- OpenAI GPT-4o-mini - Synthetic data generation
