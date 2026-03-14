@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-- [research Goal](#research-goal)
+- [Research Goal](#research-goal)
 - [Quick Example](#quick-example)
 - [Classification Task](#classification-task)
 - [Key Results](#key-results)
