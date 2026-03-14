@@ -4,12 +4,12 @@
 
 ## Table of Contents
 
-- [Project Goal](#project-goal)
+- [research Goal](#research-goal)
 - [Quick Example](#quick-example)
 - [Classification Task](#classification-task)
 - [Key Results](#key-results)
 - [Pipeline](#pipeline)
-- [Project Structure](#project-structure)
+- [Structure](#structure)
 - [Notebooks](#notebooks)
 - [Dataset](#dataset)
 - [Experiments](#experiments)
@@ -18,7 +18,7 @@
 
 ---
 
-##  Project Goal
+##  Research Goal
 
 **SeaAlert** is an NLP system designed to:
 1. **Classify** maritime radio calls into 4 severity levels (Distress, Urgency, Safety, Routine)
@@ -31,7 +31,7 @@ Maritime radio calls are made under extreme conditions:
 - **Human Stress** — Panic causes operators to omit keywords or speak informally
 - **Protocol Violations** — Not all distress calls follow GMDSS standards ("MAYDAY", "PAN PAN")
 
-**Therefore, my classification model must handle very noisy ASR (Automatic Speech Recognition) transcriptions**, not clean text. This is the core challenge of my project.
+**Therefore, my classification model must handle very noisy ASR (Automatic Speech Recognition) transcriptions**, not clean text. This is the core challenge of my research.
 
 ### My Approach: Dual Augmentation
 
@@ -194,7 +194,7 @@ My end-to-end pipeline simulates real maritime communication:
 
 ---
 
-## Project Structure
+## Structure
 
 ```
 SeaAlert/
@@ -220,14 +220,12 @@ SeaAlert/
 │   ├── csv/                            # CSV data (metrics, splits, error reports)
 │   └── visuals/                        # Figures, plots, and text reports
 │
-├── presentation/                       # Project presentations
+├── presentation/                       #  presentations
 │   ├── Proposal.pdf
 │   ├── Interim.pdf
 │   └── Final.pdf
 │
-├── archive/                            # Previous project versions
-│
-├── assets/                             # Project images and diagrams
+├── assets/                             # Images and diagrams
 │   └── pipeline_diagram.png
 │
 ├── .gitignore                          # Git ignore rules
@@ -238,9 +236,9 @@ SeaAlert/
 
 ## Presentations
 
-- [**Proposal**](presentation/Proposal.pdf) – Initial project proposal
-- [**Interim**](presentation/Interim.pdf) – Mid-project progress update
-- [**Final**](presentation/Final.pdf) – Final project presentation
+- [**Proposal**](presentation/Proposal.pdf) – Initial research proposal
+- [**Interim**](presentation/Interim.pdf) – Mid-research progress update
+- [**Final**](presentation/Final.pdf) – Final research presentation
 
 *(PPTX files are also included in the `presentation/` folder)*
 
@@ -449,11 +447,10 @@ OPENAI_API_KEY = "sk-your-key-here"
 ### Quick Run Mode (No API)
 Set `QUICK_RUN = True` in Notebook 01 for template-based data.
 
----
 
-## License
 
-Educational project for NLP course.
+
+
 
 ---
 
