@@ -1,462 +1,192 @@
-# SeaAlert 
-### Robust Severity Assessment and Information Extraction from Noisy Maritime Distress Communications Using Large Language Models
+# SeaAlert
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c?logo=pytorch&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-orange?logo=huggingface&logoColor=white)
+
+**Severity Assessment and Critical Information Extraction in Maritime Distress Communications Using LLM-Generated Data**
+
+*Tomer Atia<sup>1</sup>, Yehudit Aperstein<sup>2</sup>, Alexander Apartsin<sup>1</sup>*
+
+<sup>1</sup> HIT-Holon Institute of Technology &nbsp;|&nbsp; <sup>2</sup> Afeka Academic College of Engineering
+
+---
 
 ## Table of Contents
 
-- [Research Goal](#research-goal)
-- [Quick Example](#quick-example)
-- [Classification Task](#classification-task)
-- [Key Results](#key-results)
+- [Overview](#overview)
+- [Key Features](#key-features)
 - [Pipeline](#pipeline)
-- [Structure](#structure)
-- [Notebooks](#notebooks)
+- [Key Results](#key-results)
 - [Dataset](#dataset)
-- [Experiments](#experiments)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
+- [Installation & Usage](#installation--usage)
+- [Repository Structure](#repository-structure)
+- [Citation](#citation)
 
 ---
 
-##  Research Goal
+## Overview
 
-**SeaAlert** is an NLP system designed to:
-1. **Classify** maritime radio calls into 4 severity levels (Distress, Urgency, Safety, Routine)
-2. **Extract** actionable information (Location, Vessel Name, Persons on Board, Nature of Incident)
+SeaAlert is an end-to-end NLP framework for classifying maritime VHF distress messages by severity and extracting structured operational fields — even when the audio is heavily degraded by noise and ASR errors.
 
-### The Real-World Challenge
+Real-world maritime communication is noisy, brief, and often deviates from the GMDSS standard format. Traditional keyword-spotting systems break down when codewords like MAYDAY are corrupted or omitted. SeaAlert addresses this by building a full pipeline: from LLM-generated synthetic data and simulated VHF audio, through ASR transcription, to robust classification and information extraction.
 
-Maritime radio calls are made under extreme conditions:
-- **High Noise Environment** — Engine noise, storms, VHF static interference
-- **Human Stress** — Panic causes operators to omit keywords or speak informally
-- **Protocol Violations** — Not all distress calls follow GMDSS standards ("MAYDAY", "PAN PAN")
+## Key Features
 
-**Therefore, my classification model must handle very noisy ASR (Automatic Speech Recognition) transcriptions**, not clean text. This is the core challenge of my research.
-
-### My Approach: Dual Augmentation
-
-We tackle this challenge using **two augmentation techniques**:
-1. **LLM-based Text Generation** — GPT-4o-mini generates diverse maritime messages (formal, informal, protocol violations)
-2. **ASR-based Augmentation** — Text → TTS → Noisy Audio → Whisper ASR → Corrupted Text
-
-This creates realistic training data that mimics real-world maritime communication failures.
-
-![SeaAlert Pipeline](assets/pipeline_diagram.png)
-
----
-
-##  Quick Example
-
-Here's a **real example from my dataset** — demonstrating how severe ASR errors can be under high noise conditions:
-
-| Stage | Content |
-|-------|---------|
-| **Original Message** | *"**MAYDAY, MAYDAY, MAYDAY.** This is the fishing vessel '**Ocean Explorer**', call sign **WXYZ123**, MMSI **123456789**. We are adrift, approximately 15 nautical miles east of Cape Point, at position 34 degrees 12 minutes South, 18 degrees 29 minutes East. The vessel's engine has failed, and we are currently taking on water. Weather conditions are worsening with 4-meter swells and visibility reduced to **2 nautical miles**. There are 6 persons on board. We require immediate assistance for **towing**. Repeat, we are requesting a tow. Over."* |
-| **ASR Output (High Noise)** | *"**maybe, maybe, maybe**. This is the Fishing Vessel **Oceanate Spoiler**. **Paul Signed to be its Ryzen 123 MMSI 120 3 million 456000 7809**. The Area Drift approximately 15 nautical miles east of Cape Point, a position 34 degrees 12 minutes south, 18 degrees 29 minutes east. The Vessel's engine has failed and we are currently taking on water. Whether conditions are **a worse name before need as well as invisibility we choose to T-Nautical miles**. There are six persons on board. You require immediate assistance for **training**. You please, **you are wrecked**."* |
-| **Classification** | 🔴 **DISTRESS** |
-| **Extracted Information** | `Vessel: Oceanate Spoiler` · `Location: NONE` · `POB: NONE` · `Nature: taking on water` |
-
-**Critical ASR Errors Shown:**
-- `MAYDAY, MAYDAY, MAYDAY` → `maybe, maybe, maybe` 🔴 **(codeword completely lost!)**
-- `Ocean Explorer` → `Oceanate Spoiler` (vessel name corrupted)
-- `call sign WXYZ123, MMSI 123456789` → `Paul Signed to be its Ryzen 123...` (identifiers destroyed)
-- `visibility reduced to 2 nautical miles` → `invisibility we choose to T-Nautical miles` (nonsensical)
-- `requesting a tow. Over.` → `training. You please, you are wrecked.` (meaning completely altered)
-
-Despite these **catastrophic ASR errors** — where the critical MAYDAY codeword became "maybe" and the message ended with "you are wrecked" — my Transformer model correctly classifies the message as DISTRESS based on contextual understanding of phrases like "engine has failed", "taking on water", and "require immediate assistance".
-
----
-
-## Classification Task
-
-SeaAlert classifies messages into 4 severity labels based on GMDSS protocol:
-
-| Label | Codeword | Description |
-|-------|----------|-------------|
-| **Distress** | MAYDAY | Life-threatening emergencies requiring immediate assistance |
-| **Urgency** | PAN PAN | Urgent situations not immediately life-threatening |
-| **Safety** | SECURITE | Navigation hazards, weather warnings |
-| **Routine** | NONE | Regular communications, radio checks |
-
----
-
-## Information Extraction
-
-Beyond classification, **SeaAlert** extracts structured, actionable data from unstructured messages:
-
-| Field | Description | Example |
-|-------|-------------|---------|
-| **Vessel Name** | Name of the ship in distress | `Ocean Explorer` |
-| **Call Sign / MMSI** | Unique radio identifiers | `WXYZ123` / `123456789` |
-| **Location** | Coordinates or relative position | `34°15'N, 120°45'W` |
-| **POB** | Persons On Board (Count) | `15` |
-| **Nature** | Type of incident | `Sinking`, `Fire`, `Medical` |
-
-This structured output is critical for rescue coordination centers to dispatch appropriate resources.
-
----
-
-## Key Results
-
-### Transformer Model Selection
-
-Two transformer models were evaluated on the validation set:
-
-| Model | Parameters | Validation F1 | Selected |
-|-------|------------|---------------|----------|
-| DistilBERT | 66M | 0.679 | ❌ |
-| **RoBERTa** | 125M | **0.734** | ✅ |
-
-**RoBERTa was selected** for all experiments due to its superior validation performance (+5.5% F1).
-
-### Final Model Comparison
-
-| Model | Type | Clean F1 | ASR-High F1 | Trap F1 | ASR Robustness |
-|-------|------|----------|-------------|---------|----------------|
-| Logistic Regression | Baseline | 0.674 | 0.423 | 0.139 | -37% drop |
-| Linear SVM | Baseline | 0.686 | - | - | - |
-| Naive Bayes | Baseline | 0.592 | - | - | - |
-| **RoBERTa** | Transformer | 0.664 | **0.569** | **0.236** | **-14% drop** |
-
-### Key Findings
-
-1. **ASR Robustness** — RoBERTa maintains better performance on noisy ASR transcripts:
-   - BoW: 67.4% → 42.3% F1 (37% degradation)
-   - RoBERTa: 66.4% → 56.9% F1 (**only 14% degradation**)
-
-2. **Codeword Reliance** — Both models rely heavily on GMDSS keywords:
-   - With codeword: 100% accuracy (both models)
-   - Without codeword: ~51% accuracy (both models)
-
-3. **Adversarial Robustness** — RoBERTa handles tricky cases better:
-   - Negations: "This is NOT a distress"
-   - Drills: "MAYDAY - this is a drill"
-   - RoBERTa: 23.6% F1 vs BoW: 13.9% F1 (70% improvement)
-
-4. **Data Augmentation** — Training with ASR-corrupted text improves robustness:
-   - BoW with ASR augmentation: 58.9% F1 on ASR-high (vs 42.3% without)
+- **Synthetic dataset** of 1,872 messages generated by GPT-4 — balanced across 4 severity classes, 3 communication styles, and 12 maritime scenarios
+- **Audio simulation** using Coqui TTS (109 speakers) + VHF noise injection at two SNR levels (12 dB / 6 dB)
+- **ASR transcription** via Whisper, with WER analysis at each noise level
+- **Classification** comparing BoW baselines (TF-IDF + Logistic Regression) vs. RoBERTa transformer
+- **Robustness experiments**: ASR noise degradation, codeword masking, and adversarial trap messages
+- **Structured extraction** comparing Regex vs. GPT-4 for fields like vessel name, MMSI, position, and POB
 
 ---
 
 ## Pipeline
 
-My end-to-end pipeline simulates real maritime communication:
-
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        SeaAlert Pipeline                                │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                         │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐              │
-│  │   GPT-4o-mini│    │  Coqui TTS   │    │ Noise Layer  │              │
-│  │  Generation  │───▶│  Synthesis   │───▶│  (VHF Radio) │              │
-│  │ 1,872 msgs   │    │   16kHz      │    │ 6/12/18 dB   │              │
-│  └──────────────┘    └──────────────┘    └──────────────┘              │
-│         │                                       │                       │
-│         ▼                                       ▼                       │
-│  ┌──────────────┐                      ┌──────────────┐                │
-│  │ Clean Text   │                      │ Whisper ASR  │                │
-│  │  Dataset     │                      │ Transcription│                │
-│  └──────────────┘                      └──────────────┘                │
-│         │                                       │                       │
-│         └───────────────┬───────────────────────┘                       │
-│                         ▼                                               │
-│              ┌─────────────────────┐                                    │
-│              │   Model Training    │                                    │
-│              │  BoW vs Transformer │                                    │
-│              └─────────────────────┘                                    │
-│                         │                                               │
-│         ┌───────────────┼───────────────┐                               │
-│         ▼               ▼               ▼                               │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐                       │
-│  │ Exp 1:      │ │ Exp 2:      │ │ Exp 3:      │                       │
-│  │ Codeword    │ │ Adversarial │ │ ASR         │                       │
-│  │ Masking     │ │ Traps       │ │ Robustness  │                       │
-│  └─────────────┘ └─────────────┘ └─────────────┘                       │
-│                         │                                               │
-│                         ▼                                               │
-│              ┌─────────────────────┐                                    │
-│              │ Classification +    │                                    │
-│              │ Info Extraction     │                                    │
-│              └─────────────────────┘                                    │
-│                                                                         │
-└─────────────────────────────────────────────────────────────────────────┘
-```
-
-| Stage | Description | Output |
-|-------|-------------|--------|
-| **1. Data Generation** | GPT-4o-mini synthetic maritime messages | 1,872 balanced samples |
-| **2. Text-to-Speech** | Coqui TTS audio synthesis | WAV files (16kHz) |
-| **3. Noise Simulation** | VHF radio noise at 3 SNR levels | Noisy audio files |
-| **4. ASR Transcription** | Faster-Whisper speech-to-text | Corrupted text transcripts |
-| **5. Model Training** | BoW baselines + RoBERTa transformer | Trained classifiers |
-| **6. Evaluation** | 3 experiments + information extraction | Results & analysis |
+![SeaAlert Pipeline Diagram](assets/pipeline_diagram.jpeg)
 
 ---
 
-## Structure
+## Key Results
 
-```
-SeaAlert/
-├── notebooks/                          # Jupyter notebooks (run in order)
-│   ├── 00_eda_dataset.ipynb            # EDA for synthetic dataset
-│   ├── 00_eda_audio_asr.ipynb          # EDA for audio & ASR quality
-│   ├── 01_generate_synthetic_dataset.ipynb   # GPT-4o-mini data generation
-│   ├── 02_text_to_speech.ipynb         # Coqui TTS synthesis
-│   ├── 03_noise_and_asr.ipynb          # Noise injection + Whisper ASR
-│   ├── 04_train_and_evaluate.ipynb     # Model training & experiments
-│   └── 05_demo_inference_and_extraction.ipynb  # Demo & extraction
-│
-├── data/                               # Datasets
-│   ├── processed/
-│   │   ├── 02seaalert.csv              # Main dataset (clean text)
-│   │   └── 03seaalert_with_asr.csv     # Dataset with ASR transcripts
-│   ├── asr/
-│   │   └── asr_transcripts.csv         # Whisper raw transcripts
-│   └── audio_*/                        # Audio index files
-│       └── *_index.csv
-│
-├── results/                            # Results & visualizations
-│   ├── csv/                            # CSV data (metrics, splits, error reports)
-│   └── visuals/                        # Figures, plots, and text reports
-│
-├── presentation/                       #  presentations
-│   ├── Proposal.pdf
-│   ├── Interim.pdf
-│   └── Final.pdf
-│
-├── assets/                             # Images and diagrams
-│   └── pipeline_diagram.png
-│
-├── .gitignore                          # Git ignore rules
-└── README.md                           # This file
-```
+### Classification Robustness
 
----
+| Model | Clean F1 | ASR High F1 | Relative Drop |
+|---|---|---|---|
+| Logistic Regression (BoW) | 0.674 | 0.423 | **−37%** |
+| RoBERTa | 0.679 | 0.608 | **−10%** |
 
-## Presentations
+- Both models perform similarly on clean text (~F1 0.68), but **RoBERTa degrades 4× less** under high ASR noise
+- The Safety class is the most fragile: BoW F1 drops **0.60 points** under ASR high noise — effectively blind to Safety messages
+- Both models rely heavily on GMDSS codewords (MAYDAY/PAN-PAN/SECURITE); performance without a codeword drops to near-chance
+- **Neither model handles drill messages** (0% accuracy) — human-in-the-loop is required for production deployment
 
-- [**Proposal**](presentation/Proposal.pdf) – Initial research proposal
-- [**Interim**](presentation/Interim.pdf) – Mid-research progress update
-- [**Final**](presentation/Final.pdf) – Final research presentation
+### Structured Extraction (Regex vs. GPT-4 at ASR High Noise)
 
-*(PPTX files are also included in the `presentation/` folder)*
+| Field | Regex | GPT-4 | Gain |
+|---|---|---|---|
+| MMSI | 0.015 | 0.239 | +1493% |
+| Call Sign | 0.040 | 0.273 | +583% |
+| Position | 0.083 | 0.323 | +289% |
+| POB | 0.305 | 0.796 | +161% |
+| Vessel | 0.465 | 0.627 | +35% |
 
----
-
-## Notebooks
-
-### 1. Exploratory Data Analysis
-
-#### 00_eda_dataset.ipynb
-- Label/style/scenario distributions
-- Text length analysis
-- Codeword presence analysis
-- Word clouds by severity label
-
-#### 00_eda_audio_asr.ipynb
-- Audio duration distributions
-- Spectrogram visualizations
-- WER (Word Error Rate) by noise level
-- Codeword preservation in ASR
-
----
-
-### 2. Data Generation & Audio Pipeline
-
-#### 01_generate_synthetic_dataset.ipynb
-Generates 1,872 synthetic maritime messages using GPT-4o-mini.
-
-**Features:**
-- 4 balanced classes: 468 samples each
-- 3 communication styles: formal, informal, third_party
-- 12 scenario types: water_ingress, fire_smoke, medical_issue, etc.
-- Codeword masking for experiments
-- Stratified train/val/test splits (70/15/15)
-
-#### 02_text_to_speech.ipynb
-Converts text to speech using Coqui TTS.
-
-**Model:** `tts_models/en/ljspeech/tacotron2-DDC`  
-**Output:** 1,872 WAV files (16kHz mono)
-
-#### 03_noise_and_asr.ipynb
-Adds realistic VHF radio noise and transcribes with Whisper.
-
-| Noise Level | SNR | WER | Characteristics |
-|-------------|-----|-----|-----------------|
-| Low | 18dB | ~15% | Light static |
-| Med | 12dB | ~20% | Moderate static, some dropouts |
-| High | 6dB | ~25% | Heavy static, frequent dropouts |
-
----
-
-### 3. Training & Evaluation
-
-#### 04_train_and_evaluate.ipynb
-Main training notebook with comprehensive experiments.
-
-**Models:**
-| Model | Library | Notes |
-|-------|---------|-------|
-| TF-IDF + LogReg | scikit-learn | Baseline |
-| TF-IDF + SVM | scikit-learn | Baseline |
-| TF-IDF + NaiveBayes | scikit-learn | Baseline |
-| DistilBERT | HuggingFace | Evaluated (66M params) |
-| RoBERTa-base | HuggingFace | **Selected** (125M params) |
-
-**Experiments:**
-1. Codeword Masking — Tests reliance on GMDSS keywords
-2. Adversarial Traps — Negations, drills, resolved incidents
-3. ASR Robustness — Performance on noisy transcripts
-
----
-
-### 4. Demo & Extraction
-
-#### 05_demo_inference_and_extraction.ipynb
-End-to-end demonstration:
-- Classify messages with trained RoBERTa model
-- Compare original vs ASR-corrupted text
-- Extract structured information (vessel, location, POB)
-- Generate visual rescue reports
+- **GPT-4 outperforms Regex on every field** — gains range from +35% to +1493%
+- Regex collapses on alphanumeric fields (MMSI, Call Sign) because ASR fragments characters; GPT-4 reconstructs them from context
+- For noisy ASR pipelines, **LLM-based extraction is the only viable approach**
 
 ---
 
 ## Dataset
 
->  **[Download/View Full Dataset (Audio & Metadata) on Google Drive](https://drive.google.com/drive/folders/1X6kbNvaAN7yWJGcH8SU4fDIwbkNcOgdR?usp=sharing)**
-
-### Schema (02seaalert.csv)
-
-| Column | Type | Description |
-|--------|------|-------------|
-| `idx` | int | Unique sample index (0-1871) |
-| `text` | str | Original message text |
-| `label` | str | Routine / Safety / Urgency / Distress |
-| `style` | str | formal / informal / third_party |
-| `scenario_type` | str | water_ingress, fire_smoke, etc. |
-| `has_codeword` | bool | Contains MAYDAY/PAN PAN/SECURITE |
-| `codeword` | str | MAYDAY / PAN PAN / SECURITE / NONE |
-| `text_masked` | str | Codewords replaced by [SIGNAL] |
-| `vessel` | str | Vessel name |
-| `call_sign` | str | Radio call sign |
-| `mmsi` | str | MMSI number (9 digits) |
-| `location` | str | Position/coordinates |
-| `pob` | int | Persons on board |
-| `nature` | str | Nature of incident |
-
-### Statistics
-- **Total samples:** 1,872
-- **Labels:** 468 per class (perfectly balanced)
-- **With codeword:** ~35%
-- **Text length:** 35-129 words (avg: 79)
+| Property | Value |
+|---|---|
+| Total messages | 1,872 |
+| Severity classes | Distress, Urgency, Safety, Routine (468 each) |
+| Communication styles | formal, informal, third_party |
+| Scenarios | 12 (engine failure, fire, flooding, collision, etc.) |
+| Train / Val / Test | 1,310 / 281 / 281 (stratified) |
 
 ---
 
-## Experiments
+## Installation & Usage
 
-### Experiment 1: Codeword Masking
+### 1. Clone the repository
 
-Tests if models rely on GMDSS codewords or understand context.
-
-| Setting | Train Data | Test Data | BoW F1 | RoBERTa F1 |
-|---------|------------|-----------|--------|------------|
-| A (Clean) | text | text | 0.674 | 0.664 |
-| B (Masked) | masked | masked | 0.565 | 0.520 |
-| C (Transfer) | text | masked | 0.444 | 0.520 |
-
-**Finding:** Both models rely heavily on codewords. RoBERTa shows better transfer to masked text.
-
-### Experiment 2: Adversarial Traps
-
-Tests with samples designed to fool keyword-based models:
-- **Negation:** "This is NOT a distress"
-- **Drills:** "MAYDAY - this is a drill"
-- **Past incidents:** "Distress was resolved yesterday"
-
-| Model | Trap Accuracy | Trap F1 |
-|-------|---------------|---------|
-| BoW | 26.7% | 0.139 |
-| RoBERTa | 33.3% | 0.236 |
-
-**Finding:** Both struggle, but RoBERTa performs ~70% better.
-
-### Experiment 3: ASR Robustness
-
-Tests performance on Whisper-transcribed noisy audio.
-
-| Model | Clean F1 | ASR-Med F1 | ASR-High F1 | Degradation |
-|-------|----------|------------|-------------|-------------|
-| BoW | 0.674 | 0.427 | 0.423 | -37% |
-| RoBERTa | 0.664 | 0.605 | 0.569 | **-14%** |
-| BoW (augmented) | - | - | 0.589 | - |
-
-**Finding:** RoBERTa is significantly more robust to ASR noise. Data augmentation helps BoW.
-
----
-
-## Installation
-
-### Google Colab (Recommended)
-Each notebook auto-installs dependencies. Just run the first cell.
-
-### Local Development
 ```bash
-# Core
-pip install pandas numpy tqdm scikit-learn matplotlib joblib
-
-# Text generation
-pip install openai jsonschema
-
-# TTS & Audio
-pip install TTS soundfile librosa scipy
-
-# ASR
-pip install faster-whisper
-
-# Transformers
-pip install transformers datasets evaluate accelerate torch
-```
-
----
-
-## Quick Start
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/your-repo/SeaAlert.git
+git clone https://github.com/tomeratia/SeaAlert.git
 cd SeaAlert
 ```
 
-### 2. Set API Key (for LLM features)
+### 2. Install dependencies
+
+```bash
+pip install pandas numpy tqdm scikit-learn matplotlib joblib
+pip install openai jsonschema
+pip install TTS soundfile librosa scipy
+pip install faster-whisper
+pip install transformers datasets evaluate accelerate torch
+```
+
+### 3. Set your OpenAI API key
+
+Create `src/API_KEY.py`:
+
 ```python
-# Create src/API_KEY.py
-OPENAI_API_KEY = "sk-your-key-here"
+OPENAI_API_KEY = "your-key-here"
 ```
 
-### 3. Run Notebooks in Order
+### 4. Run the notebooks in order
+
+```bash
+# 1. Generate synthetic dataset (set QUICK_RUN=True to skip GPT-4 call)
+jupyter notebook notebooks/01_generate_synthetic_dataset.ipynb
+
+# 2. Text-to-speech synthesis
+jupyter notebook notebooks/02_text_to_speech.ipynb
+
+# 3. Noise injection + ASR transcription
+jupyter notebook notebooks/03_noise_and_asr.ipynb
+
+# 4. Train and evaluate all models
+jupyter notebook notebooks/04_train_and_evaluate.ipynb
+
+# 5. Demo inference and field extraction
+jupyter notebook notebooks/05_demo_inference_and_extraction.ipynb
 ```
-01_generate_synthetic_dataset.ipynb  →  Generate data
-02_text_to_speech.ipynb              →  Create audio
-03_noise_and_asr.ipynb               →  Add noise & transcribe
-04_train_and_evaluate.ipynb          →  Train & evaluate
-05_demo_inference_and_extraction.ipynb  →  Demo
+
+> **Note:** Notebooks are designed for Google Colab and auto-install their dependencies. For local use, install manually as above.
+
+### Quick inference example
+
+```python
+from transformers import pipeline
+
+classifier = pipeline(
+    "text-classification",
+    model="models/best_transformer/",
+    return_all_scores=True
+)
+
+text = "MAYDAY MAYDAY MAYDAY. This is vessel Sea Breeze. Engine fire, taking on water. 3 POB. Position 32N 34E."
+result = classifier(text)
+print(result)
+# [{'label': 'Distress', 'score': 0.97}, ...]
 ```
-
-### Quick Run Mode (No API)
-Set `QUICK_RUN = True` in Notebook 01 for template-based data.
-
-
-
-
-
 
 ---
 
-## Acknowledgments
+## Repository Structure
 
-- [Coqui TTS](https://github.com/coqui-ai/TTS) - Text-to-Speech synthesis
-- [Faster Whisper](https://github.com/guillaumekln/faster-whisper) - ASR transcription
-- [HuggingFace Transformers](https://huggingface.co/) - RoBERTa model
-- OpenAI GPT-4o-mini - Synthetic data generation
+```
+SeaAlert/
+├── notebooks/
+│   ├── 00_eda_dataset.ipynb
+│   ├── 00_eda_audio_asr.ipynb
+│   ├── 01_generate_synthetic_dataset.ipynb
+│   ├── 02_text_to_speech.ipynb
+│   ├── 03_noise_and_asr.ipynb
+│   ├── 04_train_and_evaluate.ipynb
+│   └── 05_demo_inference_and_extraction.ipynb
+├── data/
+│   ├── processed/
+│   ├── audio_clean/
+│   └── audio_noisy/
+├── results/
+```
+
+---
+
+## Citation
+
+```bibtex
+@article{seaalert2026,
+  title        = {SeaAlert: Severity Assessment and Critical Information Extraction in Maritime Distress Communications Using LLM-Generated Data},
+  author       = {Atia, Tomer and Aperstein, Yehudit and Apartsin, Alexander},
+  year         = {2025},
+  howpublished = {\url{https://github.com/tomeratia/SeaAlert}},
+  note         = {HIT-Holon Institute of Technology \& Afeka Academic College of Engineering}
+}
+```
