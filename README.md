@@ -185,7 +185,7 @@ SeaAlert/
 @article{seaalert2026,
   title        = {SeaAlert: Severity Assessment and Critical Information Extraction in Maritime Distress Communications Using LLM-Generated Data},
   author       = {Atia, Tomer and Aperstein, Yehudit and Apartsin, Alexander},
-  year         = {2025},
+  year         = {2026},
   howpublished = {\url{https://github.com/tomeratia/SeaAlert}},
   note         = {HIT-Holon Institute of Technology \& Afeka Academic College of Engineering}
 }
