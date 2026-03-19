@@ -1,7 +1,9 @@
-model,type,setting,acc,macro_f1,distress_recall,macro_recall,with_cw_acc,no_cw_acc,gap
-logistic_regression,baseline,clean,0.6797,0.6742,0.8429,0.6803,1.0,0.5263157894736842,0.4736842105263158
-roberta-base,transformer,clean,0.6833,0.6787,0.8,0.6839,1.0,0.531578947368421,0.46842105263157896
-logistic_regression,baseline,asr_med,0.4804,0.4268,0.7286,0.482,0.5164835164835165,0.4631578947368421,0.053325621746674434
-roberta-base,transformer,asr_med,0.6263,0.6198,0.7286,0.627,0.8571428571428571,0.5157894736842106,0.3413533834586465
-logistic_regression,baseline,asr_high,0.4804,0.4231,0.7286,0.482,0.4945054945054945,0.47368421052631576,0.020821283979178762
-roberta-base,transformer,asr_high,0.6121,0.6081,0.7143,0.6127,0.8351648351648352,0.5052631578947369,0.32990167727009834
+model,type,setting,acc,macro_f1,with_cw_acc,no_cw_acc,gap
+logistic_regression,baseline,clean,0.6797,0.6742,1.0000,0.5263,0.4737
+linear_svm,baseline,clean,0.6904,0.6862,0.9890,0.5474,0.4416
+naive_bayes,baseline,clean,0.5907,0.5922,0.9341,0.4263,0.5078
+logistic_regression,baseline,asr_med,0.4804,0.4268,0.5165,0.4632,0.0533
+logistic_regression,baseline,asr_high,0.4804,0.4231,0.4945,0.4737,0.0208
+roberta-base,transformer,clean,0.6833,0.6787,1.0000,0.5316,0.4684
+roberta-base,transformer,asr_med,0.6263,0.6198,0.8571,0.5158,0.3414
+roberta-base,transformer,asr_high,0.6121,0.6081,0.8352,0.5053,0.3299
