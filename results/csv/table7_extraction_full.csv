@@ -1,0 +1,7 @@
+Field,Ground Truth,Regex,GPT-4
+Vessel,MV Ocean Voyager,Not Found (Corrupted),Diversal Ocean Voyager
+Call sign,ABC1234,Not Found (Corrupted),ABC-134-MMS-I-123
+MMSI,123456789,Not Found (Corrupted),123456789
+Position,"35 degrees 42.5 minutes North, 139 degrees 30.2 minutes East",Not Found (Corrupted),"35 degrees, 42.5 minutes north, 139 degrees 30.2 minutes east"
+POB,12,Not Found (Corrupted),12
+Incident,grounding,Not Found (Corrupted),"Currently grounded, requiring assistance to refloat the vessel, no injuries reported."

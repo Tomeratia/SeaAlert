@@ -1,0 +1,5 @@
+Trap Type,Message,Ground Truth,LR,RoBERTa,Why it is difficult
+Ambiguous,Vessel Blue Star. Fire up the engines. Ready to depart.,Routine,Distress (31.3%),Routine (53.6%),Ambiguity and context make understanding intent challenging for AI systems.
+Ambiguous,Testing emergency equipment. Sounding general alarm.,Routine,Routine (35.8%),Distress (42.6%),"Lacks context and specificity, making it hard to interpret accurately."
+Negation,This is NOT a distress situation. Engine running normally.,Routine,Distress (38.5%),Distress (52.2%),It misleads AI by mimicking distress while stating otherwise clearly.
+Real_No_Codeword,Engine room fire. Preparing to abandon ship. Position 45N 12W.,Distress,Routine (34.9%),Distress (41.6%),Ambiguity and urgency complicate context understanding and response prioritization.
