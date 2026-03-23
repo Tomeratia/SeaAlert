@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-orange?logo=huggingface&logoColor=white)
 
-**Severity Assessment and Critical Information Extraction in Maritime Distress Communications Using LLM-Generated Data**
+**Critical Information Extraction From Maritime Distress Communications with Large Language Models**
 
 *Tomer Atia<sup>1</sup>, Yehudit Aperstein<sup>2</sup>, Alexander Apartsin<sup>1</sup>*
 
