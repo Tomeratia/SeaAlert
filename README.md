@@ -139,22 +139,27 @@ jupyter notebook notebooks/05_demo_inference_and_extraction.ipynb
 
 > **Note:** Notebooks are designed for Google Colab and auto-install their dependencies. For local use, install manually as above.
 
-### Quick inference example
+### Case Study: Noisy ASR Extraction
 
-```python
-from transformers import pipeline
+**ASR Transcript (High Noise)**
+> *"PAM PAM. PAM PAM. This is my Diversal Ocean Voyager, call sign ABC-134-MMS-I-123,456,789. We are currently grounded at position 35 degrees, 42.5 minutes north, 139 degrees 30.2 minutes east, weather conditions are moderate with 10 knots of wind from the east and the slight snow. There are 12 persons on board, who require assistance to reflow our vessel. No injuries supported at this time. Over."*
 
-classifier = pipeline(
-    "text-classification",
-    model="models/best_transformer/",
-    return_all_scores=True
-)
+#### Classification Results
 
-text = "MAYDAY MAYDAY MAYDAY. This is vessel Sea Breeze. Engine fire, taking on water. 3 POB. Position 32N 34E."
-result = classifier(text)
-print(result)
-# [{'label': 'Distress', 'score': 0.97}, ...]
-```
+| Ground Truth | Logistic Regression Prediction | RoBERTa Prediction |
+|:---|:---|:---|
+| **Urgency** | Routine (Conf: 0.39) | Urgency (Conf: 0.92) |
+
+#### Information Extraction Results
+
+| Field | Ground Truth | GPT-4 Extraction | Status |
+|:---|:---|:---|:---|
+| **Vessel** | MV OCEAN Voyager | Diversal Ocean Voyager | Partial |
+| **Call Sign** | ABC1234 | ABC-134-MMS-I-123 | Partial |
+| **MMSI** | 123456789 | 123456789 | Exact Match |
+| **Position** | 35° 42.5' N, 139° 30.2' E | 35° 42.5' N, 139° 30.2' E | Exact Match |
+| **POB** | 12 | 12 | Exact Match |
+| **Incident** | Grounding | Currently grounded, no injuries reported | Correct |
 
 ---
 
