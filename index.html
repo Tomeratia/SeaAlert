@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="SeaAlert: Robust Severity Classification and LLM-Based Information Extraction for Noisy Maritime Distress Communications">
+  <meta name="description" content="SeaAlert presents a controlled experimental framework for evaluating robust analysis of maritime distress communications, combining synthetic data generation, transformer-based severity classification (RoBERTa), and GPT-4o-mini information extraction under simulated VHF/ASR noise conditions.">
+  <meta name="keywords" content="maritime safety, NLP, distress communication, ASR noise, RoBERTa, GPT-4o-mini, information extraction, synthetic data, transformer models, GMDSS">
+  <meta name="author" content="Tomer Atia, Yehudit Aperstein, Alexander Apartsin">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Holon Institute of Technology">
+  <meta property="og:title" content="SeaAlert: Robust Severity Classification and LLM-Based Information Extraction for Noisy Maritime Distress Communications">
+  <meta property="og:description" content="SeaAlert presents a controlled experimental framework for evaluating robust analysis of maritime distress communications, combining synthetic data generation, transformer-based severity classification (RoBERTa), and GPT-4o-mini information extraction under simulated VHF/ASR noise conditions.">
+  <meta property="og:url" content="https://tomeratia.github.io/SeaAlert">
+  <meta property="og:image" content="https://tomeratia.github.io/SeaAlert/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SeaAlert - Maritime Distress Communication Analysis Framework">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Tomer Atia">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Maritime Safety">
+  <meta property="article:tag" content="Natural Language Processing">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SeaAlert: Robust Severity Classification and LLM-Based Information Extraction for Noisy Maritime Distress Communications">
+  <meta name="twitter:description" content="SeaAlert presents a controlled experimental framework for evaluating robust analysis of maritime distress communications, combining synthetic data generation, transformer-based severity classification (RoBERTa), and GPT-4o-mini information extraction under simulated VHF/ASR noise conditions.">
+  <meta name="twitter:image" content="https://tomeratia.github.io/SeaAlert/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="SeaAlert - Maritime Distress Communication Analysis Framework">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="SeaAlert: Robust Severity Classification and LLM-Based Information Extraction for Noisy Maritime Distress Communications">
+  <meta name="citation_author" content="Atia, Tomer">
+  <meta name="citation_author" content="Aperstein, Yehudit">
+  <meta name="citation_author" content="Apartsin, Alexander">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_journal_title" content="IEEE Access">
+  <meta name="citation_doi" content="10.1109/ACCESS.2026.3709004">
+  <meta name="citation_pdf_url" content="https://ieeexplore.ieee.org/document/11592329">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#0c4a6e">
+  <meta name="msapplication-TileColor" content="#0c4a6e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>SeaAlert: Robust Severity Classification & LLM Extraction - Atia, Aperstein, Apartsin | IEEE Access 2026</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Custom animations -->
+  <style>
+    /* Fade-in on scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered fade-in for children */
+    .fade-in-stagger .fade-child {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .fade-in-stagger.is-visible .fade-child:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+    .fade-in-stagger.is-visible .fade-child:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+    .fade-in-stagger.is-visible .fade-child:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+    .fade-in-stagger.is-visible .fade-child:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+
+    /* Hover zoom on carousel images */
+    .carousel .item {
+      padding-bottom: 2rem;
+    }
+    .carousel .item img {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 650px;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background-color: white;
+      padding: 15px;
+      margin: 0 auto 1.5rem auto;
+      display: block;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .carousel .item img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Button lift effect */
+    .publication-links .button {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .publication-links .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Teaser image subtle float */
+    @keyframes subtle-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .teaser-img {
+      animation: subtle-float 4s ease-in-out infinite;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Table row hover highlight */
+    .table tbody tr {
+      transition: background-color 0.2s ease;
+    }
+    .table tbody tr:hover {
+      background-color: rgba(12, 74, 110, 0.06) !important;
+    }
+
+    /* Example transcript box */
+    .transcript-box {
+      background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+      border-left: 4px solid #0c4a6e;
+      padding: 1.5rem 2rem;
+      border-radius: 0 8px 8px 0;
+      font-family: 'Inter', monospace;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #334155;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+    .transcript-box::before {
+      content: 'ASR Transcript (High Noise)';
+      position: absolute;
+      top: -12px;
+      left: 16px;
+      background: #0c4a6e;
+      color: white;
+      padding: 2px 12px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Section headings underline animation */
+    .title.is-3 {
+      position: relative;
+    }
+
+    /* Extraction comparison table styling */
+    .extraction-table {
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .extraction-table thead th {
+      background: #0c4a6e !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.5px;
+      padding: 12px 16px;
+      border: none;
+    }
+    .extraction-table tbody td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .extraction-table .match {
+      color: #166534;
+      font-weight: 500;
+    }
+    .extraction-table .partial {
+      color: #b45309;
+      font-weight: 500;
+    }
+
+    /* Enhanced Light Mode Contrast */
+    .hero.is-light, .footer {
+      background-color: #e3ecf5 !important;
+    }
+
+    /* Dark Mode Theme */
+    body.dark-mode, .dark-mode .hero {
+      background-color: #0f172a !important;
+      color: #e2e8f0 !important;
+    }
+     .dark-mode .title, .dark-mode .subtitle, .dark-mode strong, .dark-mode .content {
+       color: #f8fafc !important;
+     }
+    .dark-mode .hero.is-light, .dark-mode .footer {
+      background-color: #0b1221 !important;
+    }
+    .dark-mode .transcript-box {
+      background: linear-gradient(135deg, #0b1221 0%, #0f172a 100%) !important;
+      border-left: 4px solid #38bdf8 !important;
+      color: #cbd5e1 !important;
+    }
+    .dark-mode .transcript-box::before {
+      background: #38bdf8 !important;
+      color: #0f172a !important;
+    }
+    .dark-mode .extraction-table thead th {
+      background: #0369a1 !important;
+      color: #f8fafc !important;
+    }
+    .dark-mode .extraction-table tbody td {
+      border-bottom: 1px solid #334155 !important;
+    }
+    .dark-mode .table, .dark-mode .table td {
+      background-color: transparent !important;
+      color: #e2e8f0 !important;
+      border-color: #334155 !important;
+    }
+    .dark-mode .table th {
+      background-color: transparent !important;
+      color: #38bdf8 !important; /* brighter blue to pop out */
+      border-color: #334155 !important;
+      font-weight: 600 !important;
+      font-size: 1.05rem;
+    }
+    .dark-mode .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.03) !important; 
+    }
+    .dark-mode .table.is-striped tbody tr:not(.is-selected):nth-child(odd) {
+      background-color: transparent !important; 
+    }
+    .dark-mode .table tbody tr:hover, .dark-mode .table.is-striped tbody tr:hover {
+      background-color: rgba(56, 189, 248, 0.1) !important;
+    }
+    .dark-mode .extraction-table .match {
+      color: #4ade80 !important;
+    }
+    .dark-mode .extraction-table .partial {
+      color: #fb923c !important;
+    }
+    .dark-mode .extraction-table .has-text-danger {
+      color: #f87171 !important;
+    }
+    /* --- Top Custom Controls --- */
+    .top-controls {
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      z-index: 99;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .control-btn {
+      background-color: transparent;
+      border: 2px solid #334155;
+      color: #334155;
+      border-radius: 12px;
+      width: 55px;
+      height: 48px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .control-btn:hover {
+      background-color: #334155;
+      color: white;
+    }
+    
+    #dark-mode-toggle {
+      width: 48px;
+      height: 42px;
+      font-size: 1.15rem !important;
+    }
+
+    /* --- Sidebar Menu Overlay --- */
+    .sidebar-menu {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      height: 100vh;
+      background-color: #1a202c;
+      color: #f8fafc;
+      z-index: 1000;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-menu.is-open {
+      right: 0;
+    }
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 30px;
+      border-bottom: 1px solid #2d3748;
+      margin-bottom: 20px;
+    }
+    .sidebar-header h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: white;
+      font-weight: 500;
+    }
+    .close-btn {
+      background: none;
+      border: none;
+      color: #a0aec0;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.3s;
+    }
+    .close-btn:hover {
+      color: white;
+    }
+    .sidebar-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-nav li a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 1.15rem;
+      display: block;
+      padding: 15px 30px;
+      transition: color 0.3s, background-color 0.3s;
+    }
+    .sidebar-nav li a:hover {
+      color: white;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .sidebar-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    .sidebar-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Dark Mode Buttons */
+    .dark-mode .control-btn {
+      border-color: #475569;
+      color: #cbd5e1;
+    }
+    .dark-mode .control-btn:hover {
+      background-color: #475569;
+      color: white;
+    }
+    .dark-mode .results-carousel .item {
+      background: #0b1221 !important;
+      border-color: #1b273d !important;
+    }
+  </style>
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "SeaAlert: Robust Severity Classification and LLM-Based Information Extraction for Noisy Maritime Distress Communications",
+    "description": "SeaAlert presents a controlled experimental framework for evaluating robust analysis of maritime distress communications, combining synthetic data generation, transformer-based severity classification (RoBERTa), and GPT-4o-mini information extraction under simulated VHF/ASR noise conditions.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Tomer Atia",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Holon Institute of Technology"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yehudit Aperstein",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Afeka Academic College of Engineering"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Alexander Apartsin",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Holon Institute of Technology"
+        }
+      }
+    ],
+    "datePublished": "2026-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "IEEE Access"
+    },
+    "url": "https://tomeratia.github.io/SeaAlert",
+    "image": "https://tomeratia.github.io/SeaAlert/static/images/social_preview.png",
+    "keywords": ["maritime safety", "NLP", "distress communication", "ASR noise", "RoBERTa", "GPT-4o-mini", "information extraction", "synthetic data", "transformer models"],
+    "abstract": "Maritime distress communications transmitted over very high frequency (VHF) radio are safety-critical voice messages used to report emergencies at sea. This paper presents SeaAlert, a controlled experimental framework for evaluating robust analysis of maritime distress communications using transformer-based severity classification and LLM-based structured extraction. The resulting evaluation shows that transformer-based classification degrades more gracefully than lexical baselines under ASR noise and codeword masking, while LLM-based extraction is more effective than Regex-based extraction for noisy structured fields.",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://tomeratia.github.io/SeaAlert"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Natural Language Processing"
+      },
+      {
+        "@type": "Thing",
+        "name": "Maritime Safety Systems"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Holon Institute of Technology",
+    "url": "https://www.hit.ac.il",
+    "sameAs": [
+      "https://tomeratia.github.io/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <!-- Top Right Controls -->
+  <div class="top-controls">
+    <button id="dark-mode-toggle" class="control-btn" title="Toggle Dark Mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button id="menu-toggle-btn" class="control-btn" title="Open Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <aside class="sidebar-menu" id="sidebar-menu">
+    <div class="sidebar-header">
+      <h2>Menu</h2>
+      <button class="close-btn" id="close-menu-btn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#methodology">Methodology</a></li>
+      <li><a href="#degradation-pipeline">Case Study</a></li>
+      <li><a href="#results">Key Findings</a></li>
+      <li><a href="#BibTeX">BibTeX</a></li>
+    </ul>
+  </aside>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SeaAlert: Robust Severity Classification and LLM-Based Information Extraction for Noisy Maritime Distress Communications</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://tomeratia.github.io/" target="_blank"><strong>Tomer Atia</strong></a><sup>1</sup>,</span>
+                <span class="author-block">
+                  Yehudit Aperstein<sup>2</sup>,</span>
+                  <span class="author-block">
+                    Alexander Apartsin<sup>1</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup>1</sup>School of Computer Science, HIT - Holon Institute of Technology, Israel<br>
+                      <sup>2</sup>Intelligent Systems, Afeka Academic College of Engineering, Tel Aviv, Israel<br>
+                      <strong>IEEE Access 2026</strong>
+                    </span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+                      <!-- IEEE Xplore paper link -->
+                      <span class="link-block">
+                        <a href="https://ieeexplore.ieee.org/document/11592329" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- GitHub link -->
+                    <span class="link-block">
+                      <a href="https://github.com/Tomeratia/SeaAlert" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser image -->
+<section class="hero teaser fade-in">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/pipeline.png" alt="SeaAlert experimental pipeline: (1) data generation with GPT-4o-mini, (2) noisy audio pipeline via TTS, VHF noise simulation, and Whisper ASR, (3) model training for baselines and transformers, (4) codeword masking and adversarial trap experiments, (5) severity classification and information extraction results" class="teaser-img" style="width: 100%; height: auto;" loading="eager"/>
+      <h2 class="subtitle has-text-centered">
+        <strong>SeaAlert</strong> is a controlled experimental framework for evaluating robust analysis of
+        maritime distress communications. It combines LLM-based synthetic data generation with VHF noise
+        simulation, ASR transcription, transformer-based severity classification, and LLM-based structured
+        information extraction to assess robustness under realistic operational conditions.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light fade-in" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Maritime distress communications over VHF radio are safety-critical voice messages governed by the <strong>Global Maritime Distress and Safety System (GMDSS)</strong>. In practice, automatic analysis remains difficult because messages are often brief, noisy, and produced under stress, may deviate from the prescribed format, and are further degraded by automatic speech recognition (ASR) errors caused by channel noise and speaker stress.
+          </p>
+          <p>
+            This paper presents <strong>SeaAlert</strong>, a <strong>controlled experimental framework</strong> for evaluating robust analysis of maritime distress communications using transformer-based severity classification and LLM-based structured extraction. To address the scarcity of labeled real-world data, we develop a <strong>synthetic data generation pipeline</strong> in which an LLM produces diverse maritime messages, including challenging variants in which standard distress codewords are omitted or replaced with less explicit expressions. The generated utterances are synthesized into speech, degraded with simulated VHF noise, and transcribed by an ASR system to obtain controlled noise-degraded transcripts.
+          </p>
+          <p>
+            The resulting evaluation shows that <strong>transformer-based classification (RoBERTa) degrades more gracefully than lexical baselines</strong> under ASR noise and codeword masking, while <strong>LLM-based extraction (GPT-4o-mini) is more effective than Regex-based extraction</strong> for noisy structured fields.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Methodology section -->
+<section class="section fade-in" id="methodology">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Methodology</h2>
+        <div class="content has-text-justified">
+
+          <p>
+            SeaAlert addresses two goals: <strong>Severity Classification</strong> (Routine / Safety / Urgency / Distress) and <strong>Information Extraction</strong> (Vessel, Call Sign, MMSI, Position, POB, Nature of Incident) from noisy ASR transcripts. A synthetic dataset of maritime radio messages, generated by GPT-4o-mini, is synthesized into speech, degraded with simulated VHF channel noise, and transcribed by Whisper ASR to obtain realistic noisy transcripts.
+          </p>
+
+          <p>
+            We compare a rule-based GMDSS keyword spotter, a TF-IDF + Logistic Regression baseline, and a fine-tuned RoBERTa model across four experiments: <strong>ASR robustness</strong>, <strong>adversarial scenarios</strong>, <strong>codeword-masking ablation</strong>, and <strong>Regex vs. GPT-4o-mini structured extraction</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End methodology section -->
+
+
+<!-- Data Degradation Pipeline + Case Study section -->
+<section class="section fade-in" id="degradation-pipeline">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Case Study: A Message's Journey Through the Pipeline</h2>
+        <p class="subtitle is-5 has-text-centered" style="margin-bottom: 2.5rem;">
+          From Clean Text to Noisy ASR Transcript, Then Through Classification and Extraction
+        </p>
+
+        <!-- Step 1: Clean Text -->
+        <div class="pipeline-step">
+          <div class="pipeline-step-label">
+            <span class="pipeline-step-badge clean">Step 1</span>
+          </div>
+          <div class="pipeline-box clean-box">
+            <div class="pipeline-box-header">
+              <span class="pipeline-icon">📄</span>
+              <span class="pipeline-box-title">Input: Clean Ground Truth Text <span style="font-weight: 400; color: var(--text-secondary); font-size: 0.85em;">(Generated by GPT-4o-mini)</span></span>
+            </div>
+            <p class="pipeline-text">
+              PAN PAN, PAN PAN, this is MV Ocean Voyager, Call Sign ABC1234, MMSI 123456789.
+              We are currently grounded at position 35 degrees 42.5 minutes North, 139 degrees 30.2 minutes East.
+              Weather conditions are moderate with 10 knots of wind from the east and a slight swell.
+              There are 12 persons on board. We require assistance to refloat our vessel.
+              No injuries reported at this time. Over.
+            </p>
+          </div>
+        </div>
+
+        <!-- Arrow 1 -->
+        <div class="pipeline-arrow">
+          <i class="fas fa-arrow-down pipeline-arrow-icon"></i>
+          <span class="pipeline-arrow-label">Text-to-Speech (Coqui TTS) + VHF Noise Injection</span>
+        </div>
+
+        <!-- Step 2: Audio -->
+        <div class="pipeline-step">
+          <div class="pipeline-step-label">
+            <span class="pipeline-step-badge audio">Step 2</span>
+          </div>
+          <div class="pipeline-box audio-box">
+            <div class="pipeline-box-header">
+              <span class="pipeline-icon">🔊</span>
+              <span class="pipeline-box-title">Intermediate: Synthesized Audio (High VHF Noise)</span>
+            </div>
+            <div class="pipeline-audio-player">
+              <!-- Replace the src below with the actual path to your audio file -->
+              <audio controls style="width: 100%;">
+                <source src="static/Audio/192.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+              <p class="pipeline-audio-caption">
+                <i class="fas fa-info-circle"></i>
+                Synthesized via Coqui TTS, then degraded with simulated VHF radio channel noise (SNR: High Noise condition)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow 2 -->
+        <div class="pipeline-arrow">
+          <i class="fas fa-arrow-down pipeline-arrow-icon"></i>
+          <span class="pipeline-arrow-label">Whisper ASR Transcription</span>
+        </div>
+
+        <!-- Step 3: Noisy Transcript -->
+        <div class="pipeline-step">
+          <div class="pipeline-step-label">
+            <span class="pipeline-step-badge noisy">Step 3</span>
+          </div>
+          <div class="pipeline-box noisy-box">
+            <div class="pipeline-box-header">
+              <span class="pipeline-icon">📝</span>
+              <span class="pipeline-box-title">Output: Noisy ASR Transcript</span>
+            </div>
+            <p class="pipeline-text pipeline-text-mono">
+              <span class="asr-error">PAM PAM</span>. <span class="asr-error">PAM PAM</span>.
+              This is <span class="asr-error">my Diversal</span> Ocean Voyager, Call Sign
+              <span class="asr-error">ABC-134</span>-<span class="asr-error">MMS-I-123,456,789</span>.
+              We are currently grounded at position 35 degrees, 42.5 minutes north, 139 degrees 30.2 minutes east.
+              Weather conditions are moderate with 10 knots of wind from the east and
+              <span class="asr-error">the slight snow</span>.
+              There are 12 persons on board, who require assistance to
+              <span class="asr-error">reflow</span> our vessel.
+              No injuries <span class="asr-error">supported</span> at this time. Over.
+            </p>
+            <div class="asr-error-legend">
+              <i class="fas fa-exclamation-triangle"></i>
+              <span>Highlighted in red: critical transcription errors that LLMs must handle for accurate information extraction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow 3 -->
+        <div class="pipeline-arrow">
+          <i class="fas fa-arrow-down pipeline-arrow-icon"></i>
+          <span class="pipeline-arrow-label">Downstream Classification &amp; Extraction on the Noisy Transcript</span>
+        </div>
+
+        <h3 class="title is-4" style="margin-top: 2rem;">Classification Results</h3>
+        <table class="table is-fullwidth extraction-table">
+          <thead>
+            <tr>
+              <th>Ground Truth</th>
+              <th>Logistic Regression Prediction</th>
+              <th>RoBERTa Prediction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Urgency</strong></td>
+              <td class="has-text-danger" style="font-weight: 500;">Routine (Conf: 0.39)</td>
+              <td class="match">Urgency (Conf: 0.92)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="title is-4" style="margin-top: 3rem;">Information Extraction Results</h3>
+        <table class="table is-fullwidth extraction-table">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Ground Truth</th>
+              <th>GPT-4o-mini Extraction</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Vessel</strong></td>
+              <td>MV OCEAN Voyager</td>
+              <td>Diversal Ocean Voyager</td>
+              <td class="partial">Partial</td>
+            </tr>
+            <tr>
+              <td><strong>Call Sign</strong></td>
+              <td>ABC1234</td>
+              <td>ABC-134-MMS-I-123</td>
+              <td class="partial">Partial</td>
+            </tr>
+            <tr>
+              <td><strong>MMSI</strong></td>
+              <td>123456789</td>
+              <td>123456789</td>
+              <td class="match">Exact Match</td>
+            </tr>
+            <tr>
+              <td><strong>Position</strong></td>
+              <td>35&deg; 42.5' N, 139&deg; 30.2' E</td>
+              <td>35&deg; 42.5' N, 139&deg; 30.2' E</td>
+              <td class="match">Exact Match</td>
+            </tr>
+            <tr>
+              <td><strong>POB</strong></td>
+              <td>12</td>
+              <td>12</td>
+              <td class="match">Exact Match</td>
+            </tr>
+            <tr>
+              <td><strong>Incident</strong></td>
+              <td>Grounding</td>
+              <td>Currently grounded, no injuries reported</td>
+              <td class="match">Correct</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Data Degradation Pipeline + Case Study section -->
+
+
+<!-- Key Findings section -->
+<section class="section hero is-light fade-in" id="results">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Key Findings</h2>
+        <div class="content has-text-justified">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Experiment</th>
+                <th>Rule-Based GMDSS Spotter</th>
+                <th>BoW (Logistic Regression)</th>
+                <th>RoBERTa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Clean Text Accuracy</td>
+                <td>57.3%</td>
+                <td>68.0%</td>
+                <td>67.6%</td>
+              </tr>
+              <tr>
+                <td>Clean Text Macro-F1</td>
+                <td>0.585</td>
+                <td>0.674</td>
+                <td>0.670</td>
+              </tr>
+              <tr>
+                <td>ASR Medium Macro-F1</td>
+                <td>&mdash;</td>
+                <td>0.427</td>
+                <td>0.619</td>
+              </tr>
+              <tr>
+                <td>ASR High Macro-F1</td>
+                <td>&mdash;</td>
+                <td>0.423</td>
+                <td>0.595</td>
+              </tr>
+              <tr>
+                <td>Relative Drop (Clean &rarr; ASR High)</td>
+                <td>&mdash;</td>
+                <td><strong>~37%</strong></td>
+                <td><strong>~11%</strong></td>
+              </tr>
+              <tr>
+                <td>ECE at ASR High (lower is better)</td>
+                <td>&mdash;</td>
+                <td>0.236</td>
+                <td>0.068</td>
+              </tr>
+              <tr>
+                <td>Adversarial Trap Accuracy (n=15)</td>
+                <td>&mdash;</td>
+                <td>26.7%</td>
+                <td>40.0%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <strong>Takeaway:</strong> Clean-text performance is comparable across models, but RoBERTa's real advantage emerges under degradation - a much smaller Macro-F1 drop, better-calibrated confidence, and stronger fallback behavior when GMDSS codewords are masked or removed. For structured extraction, GPT-4o-mini zero-shot surpasses Regex on every field at high ASR noise, especially alphanumeric identifiers (MMSI, Call Sign). Both classifiers still fail on drill-message traps, underscoring the need for human oversight.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End key findings -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{Atia2026SeaAlert,
+  title={SeaAlert: Robust Severity Classification and LLM-Based Information
+         Extraction for Noisy Maritime Distress Communications},
+  author={Atia, Tomer and Aperstein, Yehudit and Apartsin, Alexander},
+  journal={IEEE Access},
+  year={2026},
+  doi={10.1109/ACCESS.2026.3709004},
+  url={https://ieeexplore.ieee.org/document/11592329}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </main>
+
+  <!-- Scroll-triggered fade-in animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var fadeEls = document.querySelectorAll('.fade-in');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        fadeEls.forEach(function(el) { observer.observe(el); });
+      } else {
+        // Fallback: show everything immediately
+        fadeEls.forEach(function(el) { el.classList.add('is-visible'); });
+      }
+    });
+  </script>
+
+  <!-- Theme & Sidebar toggle logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sidebar logic
+      const menuBtn = document.getElementById('menu-toggle-btn');
+      const closeBtn = document.getElementById('close-menu-btn');
+      const sidebar = document.getElementById('sidebar-menu');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      
+      const openMenu = () => {
+        sidebar.classList.add('is-open');
+        backdrop.classList.add('is-open');
+      };
+      
+      const closeMenu = () => {
+        sidebar.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+      };
+
+      menuBtn.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      backdrop.addEventListener('click', closeMenu);
+      
+      // Close mobile menu when a link is clicked
+      document.querySelectorAll('.sidebar-nav a').forEach(item => {
+        item.addEventListener('click', closeMenu);
+      });
+
+      // Dark Mode logic
+      const dmToggle = document.getElementById('dark-mode-toggle');
+      
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+
+      dmToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+  </script>
+
+  </body>
+  </html>
