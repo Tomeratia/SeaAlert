@@ -96,6 +96,8 @@ Real-world maritime communication is noisy, brief, and often deviates from the G
 | Scenarios | 12 (engine failure, fire, flooding, collision, etc.) |
 | Train / Val / Test | 1,310 / 281 / 281 (stratified) |
 
+Full dataset and audio files: [Google Drive](https://drive.google.com/drive/folders/1X6kbNvaAN7yWJGcH8SU4fDIwbkNcOgdR?usp=sharing)
+
 ---
 
 ## Case Study: Noisy ASR Extraction
