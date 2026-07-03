@@ -4,6 +4,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c?logo=pytorch&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-orange?logo=huggingface&logoColor=white)
+[![IEEE Access](https://img.shields.io/badge/IEEE%20Access-10.1109%2FACCESS.2026.3709004-00629B?logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11592329)
 
 **Robust Severity Classification and LLM-Based Information Extraction for Noisy Maritime Distress Communications**
 
