@@ -14,6 +14,8 @@
 
 <sup>1</sup> HIT-Holon Institute of Technology &nbsp;|&nbsp; <sup>2</sup> Afeka Academic College of Engineering
 
+**[Paper](https://ieeexplore.ieee.org/document/11592329) &nbsp;|&nbsp; [Project Page](https://tomeratia.github.io/SeaAlert)**
+
 ---
 
 ## Table of Contents
