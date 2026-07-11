@@ -168,6 +168,12 @@ jupyter notebook notebooks/04_train_and_evaluate.ipynb
 
 # 5. Demo inference and field extraction
 jupyter notebook notebooks/05_demo_inference_and_extraction.ipynb
+
+# 6. Statistical significance tests and probability calibration
+jupyter notebook notebooks/06_statistical_significance_and_calibration.ipynb
+
+# 7. Cross-validation and learning curve analysis
+jupyter notebook notebooks/07_cross_validation_and_learning_curve.ipynb
 ```
 
 > **Note:** Notebooks are designed for Google Colab and auto-install their dependencies. For local use, install manually as above.
@@ -184,7 +190,9 @@ SeaAlert/
 │   ├── 02_text_to_speech.ipynb
 │   ├── 03_noise_and_asr.ipynb
 │   ├── 04_train_and_evaluate.ipynb
-│   └── 05_demo_inference_and_extraction.ipynb
+│   ├── 05_demo_inference_and_extraction.ipynb
+│   ├── 06_statistical_significance_and_calibration.ipynb
+│   └── 07_cross_validation_and_learning_curve.ipynb
 ├── data/
 │   ├── processed/
 │   ├── audio_clean/
