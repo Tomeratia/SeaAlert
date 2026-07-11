@@ -434,6 +434,46 @@
         width: 100% !important;
         max-width: 100% !important;
       }
+      /* Make it visually obvious the table scrolls horizontally */
+      .table-container {
+        position: relative;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 6px;
+      }
+      .table-container::after {
+        content: '';
+        position: sticky;
+        top: 0;
+        right: 0;
+        float: right;
+        width: 24px;
+        height: 100%;
+        margin-right: -24px;
+        pointer-events: none;
+        background: linear-gradient(to right, transparent, rgba(0,0,0,0.12));
+      }
+      .table-container::before {
+        content: '\2194  Scroll to see more \2192';
+        display: block;
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-secondary, #64748b);
+        padding: 4px 0;
+        background: rgba(12, 74, 110, 0.06);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+      }
+      .dark-mode .table-container {
+        border-color: rgba(255,255,255,0.12);
+      }
+      .dark-mode .table-container::before {
+        background: rgba(56, 189, 248, 0.1);
+        color: #94a3b8;
+        border-bottom-color: rgba(255,255,255,0.12);
+      }
+      .dark-mode .table-container::after {
+        background: linear-gradient(to right, transparent, rgba(255,255,255,0.15));
+      }
     }
   </style>
   
