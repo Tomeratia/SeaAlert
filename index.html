@@ -418,6 +418,22 @@
       section.hero .hero-body {
         padding-top: 4.5rem !important;
       }
+      /* Prevent Bulma's .columns negative-margin gutter from causing
+         horizontal overflow (and silent content clipping) on narrow screens */
+      .columns {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .column {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+      }
+      /* Wide tables must scroll inside .table-container, not stretch
+         their ancestors and get silently clipped by the section */
+      .container, .columns, .column, .content, .table-container {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
     }
   </style>
   
@@ -793,6 +809,7 @@
         </div>
 
         <h3 class="title is-4" style="margin-top: 2rem;">Classification Results</h3>
+        <div class="table-container">
         <table class="table is-fullwidth extraction-table">
           <thead>
             <tr>
@@ -809,8 +826,10 @@
             </tr>
           </tbody>
         </table>
+        </div>
 
         <h3 class="title is-4" style="margin-top: 3rem;">Information Extraction Results</h3>
+        <div class="table-container">
         <table class="table is-fullwidth extraction-table">
           <thead>
             <tr>
@@ -859,6 +878,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
 
       </div>
     </div>
@@ -874,6 +894,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3 has-text-centered">Key Findings</h2>
         <div class="content has-text-justified">
+          <div class="table-container">
           <table class="table is-bordered is-striped is-hoverable is-fullwidth">
             <thead>
               <tr>
@@ -928,6 +949,7 @@
               </tr>
             </tbody>
           </table>
+          </div>
           <p>
             <strong>Takeaway:</strong> Clean-text performance is comparable across models, but RoBERTa's real advantage emerges under degradation - a much smaller Macro-F1 drop, better-calibrated confidence, and stronger fallback behavior when GMDSS codewords are masked or removed. For structured extraction, GPT-4o-mini zero-shot surpasses Regex on every field at high ASR noise, especially alphanumeric identifiers (MMSI, Call Sign). Both classifiers still fail on drill-message traps, underscoring the need for human oversight.
           </p>
